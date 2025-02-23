@@ -1,14 +1,16 @@
 import { NextConfig } from "next";
+module.exports = {
+    webpack(config: NextConfig) {
+        config.optimization.splitChunks = {
+            chunks: "all",
+            maxSize: 2500000, // 2.5MBを超えないように分割
+        };
 
-const nextConfig: NextConfig = {
-    webpack(config, { isServer }) {
-        if (!isServer) {
-            config.performance = {
-                maxAssetSize: 25 * 1024 * 1024, // 最大アセットサイズ 25MB
-            };
-        }
+        config.module.rules.push({
+            test: /\.(txt|md|xml)$/,
+            use: "null-loader",
+        });
+
         return config;
     },
 };
-
-export default nextConfig;
