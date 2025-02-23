@@ -46,6 +46,9 @@ export const Header = () => {
                             <li>
                                 <a href="">hobby</a>
                             </li>
+                            <li>
+                                <a href="">contact</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
