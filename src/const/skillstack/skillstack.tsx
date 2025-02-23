@@ -4,6 +4,7 @@ import {
     SiCanva,
     SiCloudflarepages,
     SiCss3,
+    SiFlask,
     SiHtml5,
     SiJavascript,
     SiNextdotjs,
@@ -45,6 +46,13 @@ export const skillData: SkillItem[] = [
         ],
     },
     {
+        heading: "Backend",
+        icons: [
+            <FaPython key="python" size={sizenum} />,
+            <SiFlask key="flask" size={sizenum} />,
+        ],
+    },
+    {
         heading: "Tools",
         icons: [
             <FaGithub key="github" size={sizenum} />,
@@ -57,7 +65,6 @@ export const skillData: SkillItem[] = [
         heading: "Others",
         icons: [
             <FaJava key="java" size={sizenum} />,
-            <FaPython key="python" size={sizenum} />,
             <FaGitAlt key="git" size={sizenum} />,
             <SiC key="c" size={sizenum} />,
             <FaMarkdown key="markdown" size={sizenum} />,
