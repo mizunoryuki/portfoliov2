@@ -1,0 +1,38 @@
+.cardBox {
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    width: calc(100% / 4.5);
+    height: 172px;
+
+    cursor: pointer;
+    padding: 10px;
+    align-items: end;
+    justify-content: end;
+    display: flex;
+    background-color: var(--background-1);
+
+    div {
+        p {
+            font-weight: bold;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.cardBox:hover {
+    scale: 1.1;
+}
+
+@media (min-width: 600px) and (max-width: 890px) {
+    .cardBox {
+        width: calc(100% / 2.5);
+    }
+}
+
+@media (max-width: 600px) {
+    .cardBox {
+        width: 100%;
+    }
+}

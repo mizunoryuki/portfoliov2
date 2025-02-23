@@ -1,0 +1,106 @@
+.headerbox {
+    position: fixed;
+    top: 0;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px 15px 10px 15px;
+    width: calc(100% - 60px);
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--background);
+
+    .linkbox {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--background-1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+        }
+        .icon:hover {
+            scale: 1.2;
+        }
+
+        .menu {
+            display: none;
+            .checkbox {
+                display: none;
+            }
+            .checkbox:checked ~ .nav {
+                visibility: visible;
+            }
+
+            .checkbox:checked + .logo {
+                .logoOpen {
+                    display: none;
+                }
+                .logoClose {
+                    display: block;
+                    transition: 1.5s;
+                }
+            }
+
+            .logoOpen {
+                display: block;
+            }
+            .logoClose {
+                display: none;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 100;
+                cursor: pointer;
+            }
+
+            .nav {
+                padding: 10px;
+                width: fit-content;
+                height: fit-content;
+                position: fixed;
+                top: 100px;
+                right: 0px;
+                z-index: 99;
+                background: #fff;
+                box-shadow: var(--shadow);
+                border-radius: 10px;
+                visibility: hidden;
+                .ul {
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .headerbox {
+        .linkbox {
+            .icon {
+                display: none;
+                background-color: var(--background-2);
+            }
+            .menu {
+                display: block;
+            }
+        }
+    }
+}
