@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    webpack: (config) => {
+        config.optimization.splitChunks.maxSize = 24000000;
+        return config;
+    },
 };
 
 export default nextConfig;
