@@ -1,16 +1,9 @@
-import { NextConfig } from "next";
 module.exports = {
-    webpack(config: NextConfig) {
-        config.optimization.splitChunks = {
-            chunks: "all",
-            maxSize: 2500000, // 2.5MBを超えないように分割
-        };
-
-        config.module.rules.push({
-            test: /\.(txt|md|xml)$/,
-            use: "null-loader",
-        });
-
-        return config;
+    optimization: {
+        minimize: true, // 最小化を有効にする
+        splitChunks: {
+            chunks: "all", // 共有の依存関係を分割
+            maxSize: 250000, // 分割されたファイルサイズの上限
+        },
     },
 };
