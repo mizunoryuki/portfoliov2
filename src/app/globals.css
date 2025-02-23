@@ -20,6 +20,10 @@ body {
     height: auto;
 }
 
+html {
+    margin-top: 100px;
+}
+
 body {
     color: var(--foreground);
     background: var(--background);

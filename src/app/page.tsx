@@ -7,16 +7,16 @@ export default function Home() {
         <div className={styles.page}>
             <div>
                 <Contentslist text="自己紹介" more={false}>
-                    <Card text="About me" />
-                    <Card text="Skills" />
-                    <Card text="Products" />
-                    <Card text="Awards" />
+                    <Card text="About me" url="aboutme" />
+                    <Card text="Skills" url="skills" />
+                    <Card text="Products" url="products" />
+                    <Card text="Awards" url="awards" />
                 </Contentslist>
                 <Contentslist text="ブログ" more={true}>
-                    <Card text="About me" />
-                    <Card text="About me" />
-                    <Card text="About me" />
-                    <Card text="About me" />
+                    <Card text="About me" url="aboutme" />
+                    <Card text="About me" url="aboutme" />
+                    <Card text="About me" url="aboutme" />
+                    <Card text="About me" url="aboutme" />
                 </Contentslist>
             </div>
         </div>
