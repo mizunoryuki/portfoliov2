@@ -1,8 +1,12 @@
 import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    webpack: (config) => {
-        config.optimization.splitChunks.maxSize = 24000000;
+    webpack(config, { isServer }) {
+        if (!isServer) {
+            config.performance = {
+                maxAssetSize: 25 * 1024 * 1024, // 最大アセットサイズ 25MB
+            };
+        }
         return config;
     },
 };
