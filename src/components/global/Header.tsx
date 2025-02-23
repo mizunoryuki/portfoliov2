@@ -4,6 +4,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { FiGithub } from "react-icons/fi";
 import { BsList } from "react-icons/bs";
 import { RiCloseFill } from "react-icons/ri";
+import Link from "next/link";
 
 export const Header = () => {
     return (
@@ -32,22 +33,25 @@ export const Header = () => {
                     <nav className={styles.nav}>
                         <ul className={styles.ul}>
                             <li>
-                                <a href="">About me</a>
+                                <Link href={"/"}>Top</Link>
                             </li>
                             <li>
-                                <a href="">Skills</a>
+                                <Link href={"/"}>Aboutme</Link>
                             </li>
                             <li>
-                                <a href="">Products</a>
+                                <Link href={"/skills"}>Skills</Link>
                             </li>
                             <li>
-                                <a href="">Awards</a>
+                                <Link href={"/"}>Products</Link>
                             </li>
                             <li>
-                                <a href="">hobby</a>
+                                <Link href={"/"}>Awards</Link>
                             </li>
                             <li>
-                                <a href="">contact</a>
+                                <Link href={"/"}>Hobby</Link>
+                            </li>
+                            <li>
+                                <Link href={"/"}>Contact</Link>
                             </li>
                         </ul>
                     </nav>

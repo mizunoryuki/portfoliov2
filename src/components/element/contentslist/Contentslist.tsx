@@ -3,8 +3,8 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import styles from "./Contentslist.module.scss";
 
 interface Props {
-    text: string;
-    more: boolean;
+    text: string; //大見出しのテキスト
+    more: boolean; //moreボタンを表示するか否か
     children: React.ReactNode;
 }
 export const Contentslist: React.FC<Props> = ({ text, more, children }) => {

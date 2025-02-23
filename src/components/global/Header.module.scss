@@ -37,7 +37,6 @@
         }
 
         .menu {
-            display: none;
             .checkbox {
                 display: none;
             }
@@ -110,9 +109,6 @@
             .icon {
                 display: none;
                 background-color: var(--background-2);
-            }
-            .menu {
-                display: block;
             }
         }
     }
