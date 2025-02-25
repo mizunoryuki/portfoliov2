@@ -2,9 +2,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import styles from "./Header.module.scss";
 import { IoLogoInstagram } from "react-icons/io";
 import { FiGithub } from "react-icons/fi";
-import { BsList } from "react-icons/bs";
-import { RiCloseFill } from "react-icons/ri";
 import Link from "next/link";
+import { Nav } from "../element/nav/Nav";
 
 export const Header = () => {
     return (
@@ -12,50 +11,33 @@ export const Header = () => {
             <h1>mimimimimimi</h1>
             <div className={styles.linkbox}>
                 <div className={styles.icon}>
-                    <FaXTwitter size={20} />
+                    <Link
+                        href={"https://x.com/Atui_yaroo"}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <FaXTwitter size={20} />
+                    </Link>
                 </div>
                 <div className={styles.icon}>
-                    <IoLogoInstagram size={25} />
+                    <Link
+                        href={"https://www.instagram.com/pmrp_29/"}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <IoLogoInstagram size={25} />
+                    </Link>
                 </div>
                 <div className={styles.icon}>
-                    <FiGithub size={20} />
+                    <Link
+                        href={"https://github.com/mizunoryuki"}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <FiGithub size={20} />
+                    </Link>
                 </div>
-                <div className={styles.menu}>
-                    <input
-                        id="input"
-                        className={styles.checkbox}
-                        type="checkbox"
-                    />
-                    <label htmlFor="input" className={styles.logo}>
-                        <BsList size={25} className={styles.logoOpen} />
-                        <RiCloseFill size={25} className={styles.logoClose} />
-                    </label>
-                    <nav className={styles.nav}>
-                        <ul className={styles.ul}>
-                            <li>
-                                <Link href={"/"}>Top</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>Aboutme</Link>
-                            </li>
-                            <li>
-                                <Link href={"/skills"}>Skills</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>Products</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>Awards</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>Hobby</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>Contact</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <Nav />
             </div>
         </div>
     );

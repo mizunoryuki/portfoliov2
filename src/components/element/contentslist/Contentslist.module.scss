@@ -23,6 +23,9 @@
         background-color: black;
         color: white;
     }
+    .more:active {
+        scale: 0.95;
+    }
 
     .boxCards {
         display: flex;

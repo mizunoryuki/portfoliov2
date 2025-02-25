@@ -36,67 +36,6 @@
         .icon:hover {
             scale: 1.2;
         }
-
-        .menu {
-            .checkbox {
-                display: none;
-            }
-            .checkbox:checked ~ .nav {
-                visibility: visible;
-            }
-
-            .checkbox:checked + .logo {
-                transition: 1.5s;
-                .logoOpen {
-                    display: none;
-                }
-                .logoClose {
-                    display: block;
-                }
-            }
-
-            .logoOpen {
-                display: block;
-            }
-            .logoClose {
-                display: none;
-            }
-
-            .logo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                z-index: 100;
-                cursor: pointer;
-            }
-
-            .nav {
-                padding: 15px;
-                width: fit-content;
-                height: fit-content;
-                position: fixed;
-                top: 70px;
-                right: 30px;
-                z-index: 99;
-                background: #fff;
-                box-shadow: var(--shadow);
-                border-radius: 10px;
-                visibility: hidden;
-                ul {
-                    list-style: none;
-                    letter-spacing: 1px;
-
-                    :nth-child(n) {
-                        margin-left: 5px;
-                    }
-
-                    :not(:nth-last-child(1)) {
-                        margin-bottom: 5px;
-                    }
-                }
-            }
-        }
     }
 }
 
