@@ -1,7 +1,7 @@
 .card {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     min-width: 300px;
-    height: 60vh;
+    height: 440px;
     padding: var(--gap-size-15);
     border-radius: var(--radius-10);
     box-shadow: var(--shadow);
@@ -9,40 +9,60 @@
     margin-bottom: 30px;
 
     .image {
-        margin: 0 auto;
         width: auto;
         height: 50%;
-        background-color: #8efe3f;
         box-sizing: border-box;
-
+        background-color: #8efe3f;
         border-radius: var(--radius-10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .product {
         display: flex;
         flex-direction: column;
         width: auto;
-        height: 50%;
+        height: calc(50% - 10px);
         margin-top: 10px;
 
         .titleContainer {
-            :nth-child(1) {
+            > p {
                 font-size: 13px;
                 font-weight: bold;
             }
-            :nth-child(2) {
+            .title {
+                text-decoration: underline var(--background-2);
                 margin-left: 13px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .title:hover {
+                scale: 0.98;
             }
         }
 
         .explanationContainer {
             flex-grow: 1;
-            :nth-child(1) {
+            > p {
                 font-size: 13px;
                 font-weight: bold;
             }
-            :nth-child(2) {
-                margin-left: 13px;
+
+            .descContainer {
+                margin-top: 3px;
+                display: flex;
+                align-items: center;
+                .desc {
+                    margin-left: 13px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 3;
+                    overflow: hidden;
+                }
             }
         }
 
@@ -55,7 +75,6 @@
             box-sizing: border-box;
             padding: 5px;
             margin-left: auto;
-
             color: #7509c3;
 
             span {
