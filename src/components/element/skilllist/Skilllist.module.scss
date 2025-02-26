@@ -14,7 +14,7 @@
         width: 100%;
         height: auto;
         box-shadow: var(--shadow);
-        border-radius: 10px;
+        border-radius: var(--radius-10);
         padding: var(--gap-size-15);
 
         display: flex;

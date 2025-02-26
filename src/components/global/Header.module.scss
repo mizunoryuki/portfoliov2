@@ -8,7 +8,7 @@
     padding: 10px 15px 10px 15px;
     width: calc(100% - 60px);
     height: 50px;
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     box-shadow: var(--shadow);
 
     display: flex;
@@ -26,7 +26,7 @@
             width: 30px;
             height: 30px;
             background-color: var(--background-1);
-            border-radius: 10px;
+            border-radius: var(--radius-10);
             display: flex;
             justify-content: center;
             align-items: center;

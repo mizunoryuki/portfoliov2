@@ -31,19 +31,19 @@ export const Nav = () => {
                         <Link href={"/"}>Top</Link>
                     </li>
                     <li onClick={handleOpenNav}>
-                        <Link href={"/"}>Aboutme</Link>
+                        <Link href={"/aboutme"}>Aboutme</Link>
                     </li>
                     <li onClick={handleOpenNav}>
                         <Link href={"/skills"}>Skills</Link>
                     </li>
                     <li onClick={handleOpenNav}>
-                        <Link href={"/"}>Products</Link>
+                        <Link href={"/products"}>Products</Link>
                     </li>
                     <li onClick={handleOpenNav}>
-                        <Link href={"/"}>Awards</Link>
+                        <Link href={"/awards"}>Awards</Link>
                     </li>
                     <li onClick={handleOpenNav}>
-                        <Link href={"/"}>Hobby</Link>
+                        <Link href={"/hobby"}>Hobby</Link>
                     </li>
                     <li onClick={handleOpenNav}>
                         <Link href={"/"}>Contact</Link>

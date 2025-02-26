@@ -41,7 +41,7 @@
         z-index: 99;
         background: #fff;
         box-shadow: var(--shadow);
-        border-radius: 10px;
+        border-radius: var(--radius-10);
         visibility: hidden;
         ul {
             list-style: none;

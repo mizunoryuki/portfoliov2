@@ -1,0 +1,56 @@
+.card {
+    width: calc(100% / 4);
+    min-width: 300px;
+    height: 60vh;
+    padding: var(--gap-size-15);
+    border-radius: var(--radius-10);
+    box-shadow: var(--shadow);
+
+    .image {
+        margin: 0 auto;
+        width: auto;
+        height: 50%;
+        border: 2px solid black;
+        box-sizing: border-box;
+
+        border-radius: var(--radius-10);
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 50%;
+        margin-top: 10px;
+
+        .titleContainer {
+            :nth-child(1) {
+                font-size: 13px;
+                font-weight: bold;
+            }
+            :nth-child(2) {
+                margin-left: 13px;
+            }
+        }
+
+        .explanationContainer {
+            flex-grow: 1;
+            :nth-child(1) {
+                font-size: 13px;
+                font-weight: bold;
+            }
+            :nth-child(2) {
+                margin-left: 13px;
+            }
+        }
+
+        .tagContainer {
+            width: fit-content;
+            font-size: 10px;
+            border: 1px solid black;
+            border-radius: var(--radius-30);
+            padding: 5px;
+            margin-left: auto;
+        }
+    }
+}

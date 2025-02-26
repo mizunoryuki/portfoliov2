@@ -1,7 +1,7 @@
 .cardBox {
     z-index: 0;
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     width: calc(100% / 4.5);
     height: 172px;
 
