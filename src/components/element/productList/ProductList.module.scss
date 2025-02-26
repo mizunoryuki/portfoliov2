@@ -1,13 +1,1 @@
-.list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 
-    gap: var(--gap-size-15);
-}
-
-@media screen and (max-width: 600px) {
-    .list {
-        flex-direction: column;
-    }
-}

@@ -1,16 +1,18 @@
 .card {
-    width: calc(100% / 4);
+    width: calc(100% / 3);
     min-width: 300px;
     height: 60vh;
     padding: var(--gap-size-15);
     border-radius: var(--radius-10);
     box-shadow: var(--shadow);
 
+    margin-bottom: 30px;
+
     .image {
         margin: 0 auto;
         width: auto;
         height: 50%;
-        border: 2px solid black;
+        background-color: #8efe3f;
         box-sizing: border-box;
 
         border-radius: var(--radius-10);
@@ -49,11 +51,12 @@
             font-size: 10px;
             font-weight: bold;
             border-radius: var(--radius-30);
+            border: 1px solid #7509c3;
             box-sizing: border-box;
             padding: 5px;
             margin-left: auto;
 
-            color: #fe5800;
+            color: #7509c3;
 
             span {
                 margin-right: 3px;
