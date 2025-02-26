@@ -12,7 +12,7 @@
         width: auto;
         height: 50%;
         box-sizing: border-box;
-        background-color: #8efe3f;
+        background-color: var(--color-product-green);
         border-radius: var(--radius-10);
         display: flex;
         align-items: center;
@@ -71,11 +71,11 @@
             font-size: 10px;
             font-weight: bold;
             border-radius: var(--radius-30);
-            border: 1px solid #7509c3;
+            border: 1px solid var(--color-product-purple);
             box-sizing: border-box;
             padding: 5px;
             margin-left: auto;
-            color: #7509c3;
+            color: var(--color-product-purple);
 
             span {
                 margin-right: 3px;

@@ -22,7 +22,11 @@
 }
 
 .cardBox:hover {
-    scale: 1.05;
+    background-color: var(--background-2);
+}
+
+.cardBox:active {
+    scale: 0.98;
 }
 
 @media (min-width: 600px) and (max-width: 890px) {

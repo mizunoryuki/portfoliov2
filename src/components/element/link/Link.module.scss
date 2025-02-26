@@ -1,6 +1,6 @@
 .linkBox {
     width: calc(100% / 4.5);
-    border: 5px solid #2cd2bb;
+    border: 5px solid var(--color-contact);
     border-radius: 10px;
     padding: var(--gap-size-15);
 
@@ -9,7 +9,7 @@
     align-items: center;
     gap: 10px;
 
-    color: #2cd2bb;
+    color: var(--color-contact);
     font-weight: bold;
 
     :nth-child(2) {
@@ -26,7 +26,7 @@
 
 .linkBox:hover {
     color: var(--background);
-    background-color: #2cd2bb;
+    background-color: var(--color-contact);
 }
 
 .linkBox:active {

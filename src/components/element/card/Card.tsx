@@ -8,13 +8,11 @@ interface Props {
 }
 export const Card = ({ text, url }: Props) => {
     return (
-        <div className={styles.cardBox}>
-            <Link href={`/${url}`}>
-                <div>
-                    <p>{text}</p>
-                    <IoMdArrowRoundForward size={15} />
-                </div>
-            </Link>
-        </div>
+        <Link href={`/${url}`} className={styles.cardBox}>
+            <div>
+                <p>{text}</p>
+                <IoMdArrowRoundForward size={15} />
+            </div>
+        </Link>
     );
 };
