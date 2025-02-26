@@ -25,16 +25,21 @@
         .icon {
             width: 30px;
             height: 30px;
-            background-color: var(--background-1);
             border-radius: var(--radius-10);
             display: flex;
             justify-content: center;
             align-items: center;
-
             cursor: pointer;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
-        .icon:hover {
-            scale: 1.2;
+
+        .icon:active {
+            scale: 0.95;
         }
     }
 }
