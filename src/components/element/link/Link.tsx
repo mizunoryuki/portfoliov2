@@ -3,6 +3,7 @@ import styles from "./Link.module.scss";
 import Link from "next/link";
 interface Contact {
     name: string;
+    id: string;
     url: string;
     icon: ReactNode;
 }
@@ -21,7 +22,7 @@ export const ContactLink = ({ contact }: Props) => {
             >
                 <p>{contact.name}</p>
                 {contact.icon}
-                <p>{contact.url}</p>
+                <p>{contact.id}</p>
             </Link>
         );
     } else {

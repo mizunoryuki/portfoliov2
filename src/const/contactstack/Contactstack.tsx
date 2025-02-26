@@ -5,6 +5,7 @@ import { IoIosMail, IoLogoInstagram } from "react-icons/io";
 
 interface Contact {
     name: string;
+    id?: string;
     url: string;
     icon: ReactNode;
 }
@@ -14,17 +15,20 @@ const sizenum = 70;
 export const Contactstack: Contact[] = [
     {
         name: "X(Twitter)",
-        url: "Atui_yaroo",
+        id: "Atui_yaroo",
+        url: "https://x.com/Atui_yaroo",
         icon: <FaXTwitter key="twitter" size={sizenum} />,
     },
     {
         name: "Instagram",
-        url: "pmrp_29",
+        id: "pmrp_29",
+        url: "https://www.instagram.com/pmrp_29",
         icon: <IoLogoInstagram key="instagram" size={sizenum} />,
     },
     {
         name: "GitHub",
-        url: "mizunoryuki",
+        id: "mizunoryuki",
+        url: "https://github.com/mizunoryuki",
         icon: <FiGithub key="github" size={sizenum} />,
     },
     {

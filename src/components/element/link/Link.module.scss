@@ -12,6 +12,8 @@
     color: var(--color-contact);
     font-weight: bold;
 
+    text-decoration: none;
+
     :nth-child(2) {
         flex-grow: 1;
     }
