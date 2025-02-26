@@ -1,7 +1,19 @@
+import Image from "next/image";
 export default function NotFound() {
     return (
-        <div>
-            <h1>Not Found</h1>
+        <div
+            style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <Image
+                src={"/notfound.png"}
+                width={600}
+                height={600}
+                alt="notFound"
+            />
         </div>
     );
 }

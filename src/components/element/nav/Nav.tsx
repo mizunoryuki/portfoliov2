@@ -46,7 +46,7 @@ export const Nav = () => {
                         <Link href={"/hobby"}>Hobby</Link>
                     </li>
                     <li onClick={handleOpenNav}>
-                        <Link href={"/"}>Contact</Link>
+                        <Link href={"/contact"}>Contact</Link>
                     </li>
                 </ul>
             </nav>
