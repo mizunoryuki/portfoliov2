@@ -5,7 +5,7 @@ import { IoIosMail, IoLogoInstagram } from "react-icons/io";
 
 interface Contact {
     name: string;
-    id?: string;
+    id: string;
     url: string;
     icon: ReactNode;
 }
@@ -33,6 +33,7 @@ export const Contactstack: Contact[] = [
     },
     {
         name: "E-mail",
+        id: "",
         url: "mizunoryuki29@gmail.com",
         icon: <IoIosMail key="email" size={sizenum} />,
     },
