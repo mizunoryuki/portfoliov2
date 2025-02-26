@@ -3,6 +3,7 @@ import { Product } from "../product/Product";
 import { ProductStack } from "@/const/productstack/ProductStack";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import styles from "./ProductList.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 export const ProductList = () => {
@@ -23,11 +24,17 @@ export const ProductList = () => {
             }}
             centeredSlides={true}
             modules={[Pagination]}
-            className="mySwiper"
+            className={`mySwiper ${styles.list}`}
         >
             {ProductStack.map((element, index) => {
                 return (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide
+                        key={index}
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                        }}
+                    >
                         <Product description={element} />
                     </SwiperSlide>
                 );
