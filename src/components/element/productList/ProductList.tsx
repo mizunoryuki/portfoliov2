@@ -2,7 +2,7 @@
 import { Product } from "../product/Product";
 import { ProductStack } from "@/const/productstack/ProductStack";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import styles from "./ProductList.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,6 +11,10 @@ export const ProductList = () => {
         <Swiper
             slidesPerView={1}
             spaceBetween={15}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+            }}
             pagination={{
                 clickable: true,
             }}
@@ -23,7 +27,7 @@ export const ProductList = () => {
                 },
             }}
             centeredSlides={true}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className={`mySwiper ${styles.list}`}
         >
             {ProductStack.map((element, index) => {
