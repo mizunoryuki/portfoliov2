@@ -23,7 +23,10 @@ export const Product = ({ description }: ProductProps) => {
                     <p>{description.explanation}</p>
                 </div>
                 <div className={styles.tagContainer}>
-                    <p>{description.tag}</p>
+                    <p>
+                        <span>#</span>
+                        {description.tag}
+                    </p>
                 </div>
             </div>
         </div>

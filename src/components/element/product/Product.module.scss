@@ -47,10 +47,17 @@
         .tagContainer {
             width: fit-content;
             font-size: 10px;
-            border: 1px solid black;
+            font-weight: bold;
             border-radius: var(--radius-30);
+            box-sizing: border-box;
             padding: 5px;
             margin-left: auto;
+
+            color: #fe5800;
+
+            span {
+                margin-right: 3px;
+            }
         }
     }
 }
