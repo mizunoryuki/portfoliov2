@@ -1,0 +1,44 @@
+.linkBox {
+    width: calc(100% / 4.5);
+    border: 5px solid #2cd2bb;
+    border-radius: 10px;
+    padding: var(--gap-size-15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    color: #2cd2bb;
+    font-weight: bold;
+
+    :nth-child(2) {
+        flex-grow: 1;
+    }
+}
+
+.linkBox:hover {
+    color: var(--background);
+    background-color: #2cd2bb;
+}
+
+.linkBox:active {
+    scale: 0.98;
+}
+
+@media screen and (max-width: 600px) {
+    .linkBox {
+        width: 100%;
+        flex-direction: row;
+        padding: 5px;
+
+        > :nth-child(1) {
+            display: none;
+        }
+
+        > :nth-child(2) {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
