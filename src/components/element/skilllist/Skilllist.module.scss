@@ -22,9 +22,5 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: var(--gap-size-30);
-
-        > :nth-child(n):hover {
-            scale: 1.2;
-        }
     }
 }
