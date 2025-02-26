@@ -1,6 +1,5 @@
 "use client";
 import { Product } from "../product/Product";
-import styles from "./ProductList.module.scss";
 import { ProductStack } from "@/const/productstack/ProductStack";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
