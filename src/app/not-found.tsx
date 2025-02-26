@@ -6,14 +6,11 @@ export default function NotFound() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                width: "97vw",
+                height: "80vh",
             }}
         >
-            <Image
-                src={"/notfound.png"}
-                width={600}
-                height={600}
-                alt="notFound"
-            />
+            <Image src={"/not.png"} width={400} height={400} alt="notFound" />
         </div>
     );
 }
