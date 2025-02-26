@@ -14,17 +14,17 @@ const sizenum = 70;
 export const Contactstack: Contact[] = [
     {
         name: "X(Twitter)",
-        url: "https://x.com/Atui_yaroo",
+        url: "Atui_yaroo",
         icon: <FaXTwitter key="twitter" size={sizenum} />,
     },
     {
         name: "Instagram",
-        url: "https://instagram.com/pmrp_29/",
+        url: "pmrp_29",
         icon: <IoLogoInstagram key="instagram" size={sizenum} />,
     },
     {
         name: "GitHub",
-        url: "https://github.com/mizunoryuki",
+        url: "mizunoryuki",
         icon: <FiGithub key="github" size={sizenum} />,
     },
     {
