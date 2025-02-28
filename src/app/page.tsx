@@ -9,8 +9,16 @@ export default function Home() {
                 <Contentslist text="自己紹介" more={false}>
                     <Card text="About me" url="aboutme" />
                     <Card text="Skills" url="skills" />
-                    <Card text="Products" url="products" />
-                    <Card text="Awards" url="awards" />
+                    <Card
+                        text="Products"
+                        url="products"
+                        color="var(--color-product-green)"
+                    />
+                    <Card
+                        text="Awards"
+                        url="awards"
+                        color="var(--color-award)"
+                    />
                 </Contentslist>
                 <Contentslist text="ブログ" more={true}>
                     <Card text="About me" url="aboutme" />

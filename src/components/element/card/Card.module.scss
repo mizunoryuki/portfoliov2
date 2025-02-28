@@ -6,27 +6,52 @@
     height: 172px;
 
     padding: 10px;
-    align-items: end;
-    justify-content: end;
     display: flex;
-    background-color: var(--background-1);
+    flex-direction: column;
+    text-decoration: none;
 
-    div {
-        p {
-            font-weight: bold;
-        }
+    position: relative;
+    overflow: hidden;
+
+    .image {
+        flex-grow: 1;
+    }
+
+    .textContainer {
         display: flex;
         flex-direction: row;
+        justify-content: end;
         align-items: center;
+        font-weight: bold;
+        margin-top: 10px;
     }
-}
+    .circle {
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s ease-in-out;
+        z-index: -1;
+    }
 
-.cardBox:hover {
-    background-color: var(--background-2);
-}
+    p {
+        color: black;
+    }
 
-.cardBox:active {
-    scale: 0.98;
+    &:hover {
+        .circle {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(10);
+        }
+    }
+
+    &:active {
+        scale: 0.98;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 890px) {
