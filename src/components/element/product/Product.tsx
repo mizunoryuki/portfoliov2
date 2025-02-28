@@ -6,7 +6,7 @@ interface Description {
     imgUrl?: string;
     title: string;
     explanation: string;
-    tag: "ハッカソン" | "個人開発";
+    tag: "ハッカソン" | "個人" | "演習";
 }
 
 interface ProductProps {
@@ -22,10 +22,10 @@ export const Product = ({ description }: ProductProps) => {
                 <Image
                     src={imgUrl}
                     alt="product image"
-                    width={270}
-                    height={185}
+                    fill
                     quality={1}
-                    className={styles.img}
+                    sizes="calc(100% / 2)"
+                    priority
                 />
             </div>
             <div className={styles.product}>

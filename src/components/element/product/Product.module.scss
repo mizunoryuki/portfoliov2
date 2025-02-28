@@ -9,11 +9,14 @@
     margin-bottom: 30px;
 
     .image {
+        z-index: 1;
+        position: relative;
         width: auto;
         height: 50%;
         box-sizing: border-box;
         background-color: var(--color-product-green);
         border-radius: var(--radius-10);
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;

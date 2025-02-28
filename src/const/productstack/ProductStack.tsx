@@ -2,7 +2,7 @@ interface description {
     imgUrl?: string;
     title: string;
     explanation: string;
-    tag: "ハッカソン" | "個人開発";
+    tag: "ハッカソン" | "個人" | "演習";
 }
 export const ProductStack: description[] = [
     {
@@ -13,18 +13,21 @@ export const ProductStack: description[] = [
         tag: "ハッカソン",
     },
     {
-        title: "プロダクト２",
-        explanation: "説明２",
+        title: "Heart Link",
+        explanation:
+            "好きな人同士でやるのが前提。スマートウォッチを使用して心拍を取得しながら恋愛に関するお題で話をしてもらいお互いの相性を診断する。",
+        tag: "演習",
+    },
+    {
+        title: "YOFUKASHI",
+        explanation:
+            "徹夜中のストレスを軽減させるアプリ。徹夜中に奇声を発すると音楽が鳴り、みんなでダンスをする。",
         tag: "ハッカソン",
     },
     {
-        title: "プロダクト３",
-        explanation: "説明３",
-        tag: "ハッカソン",
-    },
-    {
-        title: "プロダクト４",
-        explanation: "説明４",
-        tag: "ハッカソン",
+        title: "pxとremを変換",
+        explanation:
+            "rootピクセルを指定すると、rootピクセルをもとにしたremを算出してくれる。",
+        tag: "個人",
     },
 ];
