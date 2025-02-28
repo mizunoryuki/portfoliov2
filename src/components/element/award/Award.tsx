@@ -1,17 +1,7 @@
 import styles from "./Award.module.scss";
+import { AwardInfo } from "@/types/awards";
 
-interface Props {
-    prize: string;
-    tournament: string;
-    date: string;
-    name: string;
-}
-
-interface Prop {
-    award: Props;
-}
-
-export const Award = ({ award }: Prop) => {
+export const Award = ({ award }: AwardInfo) => {
     const { prize, tournament, date, name } = award;
     return (
         <div className={styles.awardContainer}>

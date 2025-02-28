@@ -1,16 +1,18 @@
-import { ReactNode } from "react";
 import {
     SiC,
     SiCanva,
     SiCloudflarepages,
     SiCss3,
+    SiEslint,
     SiFlask,
     SiHtml5,
     SiJavascript,
     SiNextdotjs,
+    SiPrettier,
     SiReact,
     SiStyledcomponents,
     SiTypescript,
+    SiVite,
 } from "react-icons/si";
 import {
     FaFigma,
@@ -20,15 +22,11 @@ import {
     FaMarkdown,
     FaNodeJs,
     FaPython,
+    FaSass,
 } from "react-icons/fa6";
 import { BsFiletypeScss } from "react-icons/bs";
-
-export interface SkillItem {
-    heading: string;
-    icons: ReactNode[];
-}
-
-const sizenum: number = 70;
+import { SkillItem } from "@/types/skills";
+const sizenum: number = 45;
 
 export const skillData: SkillItem[] = [
     {
@@ -42,7 +40,11 @@ export const skillData: SkillItem[] = [
             <SiReact key="react" size={sizenum} />,
             <SiNextdotjs key="nextjs" size={sizenum} />,
             <BsFiletypeScss key="scss" size={sizenum} />,
+            <FaSass key="sass" size={sizenum} />,
             <SiStyledcomponents key="styledcomponents" size={sizenum} />,
+            <SiVite key="vite" size={sizenum} />,
+            <SiEslint key="eslint" size={sizenum} />,
+            <SiPrettier key="prettier" size={sizenum} />,
         ],
     },
     {

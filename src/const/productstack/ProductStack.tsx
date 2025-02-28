@@ -1,10 +1,5 @@
-interface description {
-    imgUrl?: string;
-    title: string;
-    explanation: string;
-    tag: "ハッカソン" | "個人" | "演習";
-}
-export const ProductStack: description[] = [
+import { Description } from "@/types/products";
+export const ProductStack: Description[] = [
     {
         imgUrl: "/codeCrush.png",
         title: "Code Crush",

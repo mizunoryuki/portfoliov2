@@ -11,7 +11,7 @@
     }
 
     .skillBox {
-        color: #c5baff;
+        color: var(--background-3);
         width: 100%;
         height: auto;
         box-shadow: var(--shadow);
@@ -20,6 +20,7 @@
 
         display: flex;
         flex-direction: row;
+        justify-content: start;
         flex-wrap: wrap;
         gap: var(--gap-size-30);
     }

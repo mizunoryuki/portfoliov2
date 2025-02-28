@@ -1,17 +1,7 @@
-import { ReactNode } from "react";
 import styles from "./Link.module.scss";
 import Link from "next/link";
-interface Contact {
-    name: string;
-    id: string;
-    url: string;
-    icon: ReactNode;
-}
-
-interface Props {
-    contact: Contact;
-}
-export const ContactLink = ({ contact }: Props) => {
+import { ContactProps } from "@/types/contact";
+export const ContactLink = ({ contact }: ContactProps) => {
     if (contact.name !== "E-mail") {
         return (
             <Link

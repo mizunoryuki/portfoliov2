@@ -1,14 +1,7 @@
-import { ReactNode } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { IoIosMail, IoLogoInstagram } from "react-icons/io";
-
-interface Contact {
-    name: string;
-    id: string;
-    url: string;
-    icon: ReactNode;
-}
+import { Contact } from "@/types/contact";
 
 const sizenum = 70;
 

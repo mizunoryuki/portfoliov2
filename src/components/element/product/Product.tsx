@@ -1,17 +1,7 @@
 import { RiExternalLinkFill } from "react-icons/ri";
 import styles from "./Product.module.scss";
 import Image from "next/image";
-
-interface Description {
-    imgUrl?: string;
-    title: string;
-    explanation: string;
-    tag: "ハッカソン" | "個人" | "演習";
-}
-
-interface ProductProps {
-    description: Description;
-}
+import { ProductProps } from "@/types/products";
 
 export const Product = ({ description }: ProductProps) => {
     const { imgUrl = "/preparing.png", title, explanation, tag } = description; // デフォルト値を設定

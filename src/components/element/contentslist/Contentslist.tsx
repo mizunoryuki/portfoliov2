@@ -1,13 +1,13 @@
 "use client";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import styles from "./Contentslist.module.scss";
+import { ContentsList } from "@/types/top";
 
-interface Props {
-    text: string; //大見出しのテキスト
-    more: boolean; //moreボタンを表示するか否か
-    children: React.ReactNode;
-}
-export const Contentslist: React.FC<Props> = ({ text, more, children }) => {
+export const Contentslist: React.FC<ContentsList> = ({
+    text,
+    more,
+    children,
+}) => {
     return (
         <div className={styles.box}>
             <h2
