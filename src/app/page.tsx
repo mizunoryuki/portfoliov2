@@ -7,7 +7,11 @@ export default function Home() {
         <div className={styles.page}>
             <div>
                 <Contentslist text="自己紹介" more={false}>
-                    <Card text="About me" url="aboutme" />
+                    <Card
+                        text="About me"
+                        url="aboutme"
+                        color="var(--color-aboutme)"
+                    />
                     <Card text="Skills" url="skills" />
                     <Card
                         text="Products"
