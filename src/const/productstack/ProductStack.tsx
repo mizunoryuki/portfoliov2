@@ -8,6 +8,7 @@ export const ProductStack: Description[] = [
         tag: "ハッカソン",
     },
     {
+        imgUrl: "/HeartLink.jpg",
         title: "Heart Link",
         explanation:
             "好きな人同士でやるのが前提。スマートウォッチを使用して心拍を取得しながら恋愛に関するお題で話をしてもらいお互いの相性を診断する。",
@@ -23,6 +24,6 @@ export const ProductStack: Description[] = [
         title: "pxとremを変換",
         explanation:
             "rootピクセルを指定すると、rootピクセルをもとにしたremを算出してくれる。",
-        tag: "個人",
+        tag: "個人開発",
     },
 ];

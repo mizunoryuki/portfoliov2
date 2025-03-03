@@ -2,15 +2,16 @@ import { RiExternalLinkFill } from "react-icons/ri";
 import styles from "./Product.module.scss";
 import Image from "next/image";
 import { ProductProps } from "@/types/products";
+const defaultImgUrl = "/preparing.png";
 
 export const Product = ({ description }: ProductProps) => {
-    const { imgUrl = "/preparing.png", title, explanation, tag } = description; // デフォルト値を設定
+    const { imgUrl, title, explanation, tag } = description; // デフォルト値を設定
 
     return (
         <div className={styles.card}>
             <div className={styles.image}>
                 <Image
-                    src={imgUrl}
+                    src={imgUrl || defaultImgUrl}
                     alt="product image"
                     fill
                     quality={1}
