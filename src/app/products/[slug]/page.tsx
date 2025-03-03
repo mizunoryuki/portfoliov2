@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { client } from "@/libs/client";
 import { Description } from "@/types/products";
 import Image from "next/image";
@@ -58,13 +60,4 @@ export default async function BlogPostPage({
             />
         </main>
     );
-}
-
-// 静的パスを生成
-export async function generateStaticParams() {
-    const contentIds = await client.getAllContentIds({ endpoint: "blogs" });
-
-    return contentIds.map((contentId) => ({
-        id: contentId, // 各記事のIDをパラメータとして返す
-    }));
 }
