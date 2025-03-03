@@ -44,7 +44,7 @@ export const ProductList = () => {
         getPosts();
     }, []);
 
-    return (
+    return blogs ? (
         <Swiper
             slidesPerView={1}
             spaceBetween={15}
@@ -82,5 +82,5 @@ export const ProductList = () => {
                     );
                 })}
         </Swiper>
-    );
+    ) : null;
 };
