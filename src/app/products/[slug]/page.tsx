@@ -34,7 +34,7 @@ async function getBlogPost(id: string): Promise<PostInfo> {
 export default async function BlogPostPage({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) {
     const id = await params;
     const info = await getBlogPost(id.slug);
@@ -46,7 +46,7 @@ export default async function BlogPostPage({
                     src={info.post.imgUrl || "/preparing.png"}
                     alt="product image"
                     fill
-                    sizes="100vw"
+                    sizes="100"
                     priority
                 />
             </div>
