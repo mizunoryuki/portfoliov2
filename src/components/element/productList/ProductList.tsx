@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
 import { client } from "@/libs/client";
+import { Description } from "@/types/products";
 
 interface Eyecatch {
     url: string;
@@ -14,24 +15,21 @@ interface Eyecatch {
     height: number;
 }
 interface FillterdBlog {
+    id: string;
     eyecatch: Eyecatch;
     title: string;
     tag: string;
     description: string;
 }
-interface Blog {
-    imgUrl: string;
-    title: string;
-    tag: "ハッカソン" | "個人開発" | "演習";
-    explanation: string;
-}
+
 export const ProductList = () => {
-    const [blogs, setBlogs] = useState<Blog[]>();
+    const [blogs, setBlogs] = useState<Description[]>();
     useEffect(() => {
         const getPosts = async () => {
             const blog = await client.get({ endpoint: "blogs" });
-            const filterdBlog: Blog[] = blog.contents.map(
-                ({ eyecatch, title, tag, description }: FillterdBlog) => ({
+            const filterdBlog: Description[] = blog.contents.map(
+                ({ id, eyecatch, title, tag, description }: FillterdBlog) => ({
+                    id,
                     imgUrl: eyecatch?.url,
                     title,
                     tag: tag?.[0],
@@ -48,7 +46,7 @@ export const ProductList = () => {
             slidesPerView={1}
             spaceBetween={15}
             autoplay={{
-                delay: 2500,
+                delay: 4000,
                 disableOnInteraction: false,
             }}
             pagination={{

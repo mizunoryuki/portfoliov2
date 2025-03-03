@@ -5,6 +5,7 @@
     padding: var(--gap-size-15);
     border-radius: var(--radius-10);
     box-shadow: var(--shadow);
+    text-decoration: none;
 
     margin-bottom: 30px;
 
@@ -40,10 +41,6 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-            }
-
-            .title:hover {
-                scale: 0.98;
             }
         }
 
@@ -85,4 +82,10 @@
             }
         }
     }
+
+    &:hover {
+        scale: 1.03;
+        transition: 0.5s;
+    }
+    transition: 0.5s;
 }

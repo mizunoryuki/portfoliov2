@@ -14,7 +14,11 @@ export default function Home() {
                         url="aboutme"
                         color="var(--color-aboutme)"
                     />
-                    <Card text="Skills" url="skills" />
+                    <Card
+                        text="Skills"
+                        url="skills"
+                        color="var(--background-3)"
+                    />
                     <Card
                         text="Products"
                         url="products"

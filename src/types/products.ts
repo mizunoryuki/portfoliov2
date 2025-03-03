@@ -1,4 +1,5 @@
 export interface Description {
+    id: string;
     imgUrl?: string;
     title: string;
     explanation: string;

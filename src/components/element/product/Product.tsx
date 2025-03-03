@@ -2,13 +2,14 @@ import { RiExternalLinkFill } from "react-icons/ri";
 import styles from "./Product.module.scss";
 import Image from "next/image";
 import { ProductProps } from "@/types/products";
+import Link from "next/link";
 const defaultImgUrl = "/preparing.png";
 
 export const Product = ({ description }: ProductProps) => {
-    const { imgUrl, title, explanation, tag } = description; // デフォルト値を設定
+    const { id, imgUrl, title, explanation, tag } = description; // デフォルト値を設定
 
     return (
-        <div className={styles.card}>
+        <Link className={styles.card} href={`/products/${id}`}>
             <div className={styles.image}>
                 <Image
                     src={imgUrl || defaultImgUrl}
@@ -40,6 +41,6 @@ export const Product = ({ description }: ProductProps) => {
                     </p>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
