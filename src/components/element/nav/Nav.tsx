@@ -37,6 +37,9 @@ export const Nav = () => {
                         <Link href={"/skills"}>Skills</Link>
                     </li>
                     <li onClick={handleOpenNav}>
+                        <Link href={"/blog"}>Blog</Link>
+                    </li>
+                    <li onClick={handleOpenNav}>
                         <Link href={"/products"}>Products</Link>
                     </li>
                     <li onClick={handleOpenNav}>
