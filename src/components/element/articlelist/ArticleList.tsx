@@ -7,12 +7,13 @@ export const ArticleList = async () => {
     const blog = await client.get({ endpoint: "article" });
     
     const articles: Article[] = blog.contents.map(
-        ({ id, imgUrl, title, tag, explanation }: Article) => ({
+        ({ id, eyecatch, title, tag,contents,publishedAt  }: Article) => ({
             id,
-            imgUrl: imgUrl || '',
+            imgUrl: eyecatch?.url || '',
             title,
             tag: tag?.[0] ? [tag[0]] : ['未分類'],
-            explanation: explanation || '',
+			contents,
+			publishedAt,
         })
     );
 
