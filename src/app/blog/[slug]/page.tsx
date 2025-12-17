@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-    const { slug } = params;
+    const { slug } = await params;
     const res = await client.get({ endpoint: 'article', contentId: slug });
 
     const article: Article = {

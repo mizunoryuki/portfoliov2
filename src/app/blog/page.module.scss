@@ -17,6 +17,10 @@
   gap: 16px;
 }
 
+.list > * {
+  height: 100%;
+}
+
 .pagination {
   width: 100%;
   display: flex;

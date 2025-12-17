@@ -1,5 +1,5 @@
 import { client } from '@/libs/client';
-import { Card } from '@/components/element/card/Card';
+import ArticleCard from '@/components/element/article/ArticleCard';
 import Link from 'next/link';
 import { Title } from '@/components/element/title/Title';
 import type { Article } from '@/types/article';
@@ -39,7 +39,7 @@ export default async function Page({ searchParams }: Props) {
 
                 <div className={styles.list}>
                     {articles.map((article) => (
-                        <Card key={article.id} text={article.title} url={`blog/${article.id}`} />
+                        <ArticleCard key={article.id} article={article} />
                     ))}
                 </div>
 
