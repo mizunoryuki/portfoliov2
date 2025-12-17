@@ -9,7 +9,7 @@ export default function Home() {
         <div className={styles.page}>
             <Top />
             <div>
-                <Contentslist text="自己紹介" more={false}>
+                <Contentslist text="自己紹介">
                     <Card
                         text="About me"
                         url="aboutme"

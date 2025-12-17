@@ -25,7 +25,7 @@ export const ArticleList = async () => {
     const emptySlots = MAX_DISPLAY - displayArticles.length;
 
     return (
-        <Contentslist text="ブログ" more={hasMore}>
+        <Contentslist text="ブログ" more={hasMore ? 'blog' : ''}>
 	            {displayArticles.map((article) => (
                 <Card
                     key={article.id}
