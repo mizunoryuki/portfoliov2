@@ -18,7 +18,13 @@ export const ArticleCard = ({ article }: { article: Article }) => {
                         style={{ objectFit: 'cover' }}
                     />
                 ) : (
-                    <div className={styles.noImage} />
+                    <Image
+						src="/not.png"
+						alt="no image"
+						fill
+						sizes="(max-width: 600px) 100vw, 300px"
+						style={{ objectFit: 'cover' }}
+                    />
                 )}
             </div>
             <div className={styles.body}>

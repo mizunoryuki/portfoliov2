@@ -6,7 +6,7 @@ import type { Article } from '@/types/article';
 import styles from './page.module.scss';
 
 type Props = {
-    searchParams?: { page?: string };
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 const PAGE_SIZE = 6; // 1ページあたりの表示数（必要に応じて調整）
