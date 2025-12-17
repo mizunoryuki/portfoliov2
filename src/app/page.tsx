@@ -2,6 +2,7 @@ import { Contentslist } from "@/components/element/contentslist/Contentslist";
 import styles from "./page.module.css";
 import { Card } from "@/components/element/card/Card";
 import { Top } from "@/components/element/top/Top";
+import { ArticleList } from "@/components/element/articlelist/ArticleList";
 
 export default function Home() {
     return (
@@ -30,12 +31,7 @@ export default function Home() {
                         color="var(--color-award)"
                     />
                 </Contentslist>
-                <Contentslist text="ブログ" more={true}>
-                    <Card text="coming soon" url="" />
-                    <Card text="coming soon" url="" />
-                    <Card text="coming soon" url="" />
-                    <Card text="coming soon" url="" />
-                </Contentslist>
+                <ArticleList />
             </div>
         </div>
     );
