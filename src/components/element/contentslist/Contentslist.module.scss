@@ -38,6 +38,13 @@
             height: 160px; 
         }
     }
+
+    @media screen and (min-width: 1200px) {
+        .boxCards {
+            grid-template-columns: repeat(4, 240px);
+            justify-content: center; 
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {

@@ -32,10 +32,9 @@ export default async function Page({ searchParams }: Props) {
     const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
     return (
+		<div>
+		<Title text="Blog" color="#8efe3f" />
         <div className={styles.container}>
-            <div className={styles.header}>
-                <Title text="ブログ" color="#8efe3f" />
-            </div>
 
                 <div className={styles.list}>
                     {articles.map((article) => (
@@ -77,5 +76,6 @@ export default async function Page({ searchParams }: Props) {
                     </ul>
                 </nav>
         </div>
+		</div>
     );
 }
