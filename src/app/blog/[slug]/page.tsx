@@ -1,5 +1,5 @@
 import { client } from '@/libs/client';
-import ArticleDetailServer from '@/components/element/article/ArticleDetailServer';
+import ArticleDetailServer from '@/components/element/articledetailserver/ArticleDetailServer';
 import type { Article } from '@/types/article';
 
 type Props = {
