@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { client } from '@/libs/client';
 import ArticleCard from '@/components/element/article/ArticleCard';
 import Link from 'next/link';
