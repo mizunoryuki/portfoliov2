@@ -1,0 +1,42 @@
+.articleBody {
+	max-width: 100%;
+
+	.eyecatchWrapper {
+		max-width: 100%;
+		margin-bottom: 16px;
+		margin: 0 auto;
+	
+		.eyecatch { 
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+			border-radius: var(--radius-10);
+		}
+	}
+
+	.title {
+		margin-top: 16px;
+		line-height: 100%;
+		font-size: var(--font-size-30);
+	}
+
+	.publishedWrapper {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 16px;
+		margin-bottom: 64px;
+		font-weight: bold;
+		opacity: 0.5;
+		gap: 5px;
+	}
+	
+	.contents {
+		p {
+
+		}
+
+
+	}
+}
