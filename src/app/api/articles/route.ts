@@ -1,9 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { fetchArticles } from '@/libs/articles';
 
+export const runtime = 'edge';
 export const revalidate = 300;
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const limit = searchParams.get('limit');
   const offset = searchParams.get('offset');

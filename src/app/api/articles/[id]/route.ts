@@ -1,13 +1,14 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { fetchArticleById } from '@/libs/articles';
 
+export const runtime = 'edge';
 export const revalidate = 300;
 
 export async function GET(
-  _request: Request,
-  { params }: { params: Promise<{ id: string }> },
+  _request: NextRequest,
+  { params }: { params: { id: string } },
 ) {
-  const { id } = await params;
+  const { id } = params;
 
   try {
     const article = await fetchArticleById(id, { revalidateSeconds: revalidate });
