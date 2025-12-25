@@ -1,7 +1,7 @@
 import type { Article } from '@/types/article';
 import Image from 'next/image';
 import styles from './ArticleDetailServer.module.scss';
-import { convertTime } from './converTime';
+import { convertTime } from '@/utils/convertTime';
 import { IoMdTime } from "react-icons/io";
 import { ArticleBackButton } from '../articlebackbutton/ArticleBackButton';
 
