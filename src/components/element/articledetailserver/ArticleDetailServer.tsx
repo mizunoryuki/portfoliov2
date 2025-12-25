@@ -3,13 +3,16 @@ import Image from 'next/image';
 import styles from './ArticleDetailServer.module.scss';
 import { convertTime } from './converTime';
 import { IoMdTime } from "react-icons/io";
+import { ArticleBackButton } from '../articlebackbutton/ArticleBackButton';
 
 export default function ArticleDetailServer({ article }: { article: Article }) {
 
 	const convertedTime = convertTime(article.publishedAt);
 
 	return (
-		<article className={styles.articleBody}>
+		<div>
+			<ArticleBackButton />
+			<article className={styles.articleBody}>
 			{article.eyecatch?.url && (
 				<div className={styles.eyecatchWrapper}>
 					<Image
@@ -31,5 +34,6 @@ export default function ArticleDetailServer({ article }: { article: Article }) {
 			</div>
 			<div dangerouslySetInnerHTML={{ __html: article.contents || '内容の取得に失敗しました' }} className={styles.content}/>
 		</article>
+		</div>
 	);
 }

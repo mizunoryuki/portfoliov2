@@ -1,0 +1,30 @@
+.button {
+	cursor: pointer;
+	margin-bottom: 10px;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	border-radius: var(--radius-30);
+	padding: 5px;
+	border: 1px solid black;
+	background-color: transparent;
+	margin-bottom: 30px;
+	font-weight: bold;
+
+	&:hover {
+		border: 1px solid white;
+		background-color: black;
+		color: white;
+	}
+
+	&:active {
+		scale: 0.95;
+	}
+
+	.icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
