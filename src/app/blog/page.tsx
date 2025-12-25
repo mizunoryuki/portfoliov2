@@ -1,10 +1,9 @@
 export const runtime = 'edge';
 
-import { client } from '@/libs/client';
 import ArticleCard from '@/components/element/article/ArticleCard';
 import Link from 'next/link';
 import { Title } from '@/components/element/title/Title';
-import { ArticleListResponseSchema, type Article } from '@/types/article';
+import { fetchArticles } from '@/libs/articles';
 import styles from './page.module.scss';
 
 type Props = {
@@ -18,10 +17,11 @@ export default async function Page({ searchParams }: Props) {
     const page = Math.max(1, parseInt((param?.page as string) || '1', 10) || 1);
     const offset = (page - 1) * PAGE_SIZE;
 
-    const parsed = ArticleListResponseSchema.parse(await client.get({ endpoint: 'article', queries: { limit: PAGE_SIZE, offset } }));
-
-    const totalCount: number = parsed.totalCount;
-    const articles: Article[] = parsed.contents;
+    const { contents: articles, totalCount } = await fetchArticles({
+        limit: PAGE_SIZE,
+        offset,
+        fields: 'id,title,eyecatch,publishedAt,tag,contents',
+    });
 
     const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
