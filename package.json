@@ -2,6 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,24 +12,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.14.6",
     "microcms-js-sdk": "^3.1.2",
-    "next": "15.1.7",
+    "next": "15.1.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "sass": "^1.85.0",
     "swiper": "^11.2.4",
-    "vercel": "^41.2.0"
+    "vercel": "^50.1.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.8",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.1.7",
+    "eslint-config-next": "15.1.9",
     "typescript": "^5",
-    "wrangler": "^3.109.2"
+    "wrangler": "^4.55.0"
   }
 }

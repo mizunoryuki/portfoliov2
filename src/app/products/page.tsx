@@ -4,7 +4,7 @@ import { ProductList } from "@/components/element/productList/ProductList";
 export default function Page() {
     return (
         <div>
-            <Title text="Products" color="#8efe3f" />
+            <Title text="Products" color="var(--color-product-green)" />
             <div>
                 <ProductList />
             </div>

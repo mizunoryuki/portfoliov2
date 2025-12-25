@@ -1,6 +1,8 @@
 :root {
     --foreground: #000000;
     --background: #fbfbfb;
+    --font-base: var(--font-inter);
+    --font-noto: var(--font-noto);
     --font-size-10: 0.625rem;
     --font-size-20: 1.25rem;
     --font-size-30: 1.875rem;
@@ -19,6 +21,7 @@
     --color-product-green: #8efe3f;
     --color-product-purple: #7509c3;
     --color-award: #e14b88;
+    --color-blog: #c4d9ff;
 }
 
 html,
@@ -34,9 +37,18 @@ html {
 body {
     color: var(--foreground);
     background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-base), "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body.use-inter {
+    --font-base: var(--font-inter);
+}
+
+body.use-noto {
+    --font-base: var(--font-noto);
 }
 
 * {

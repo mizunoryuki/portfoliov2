@@ -6,6 +6,6 @@ export interface Content {
 
 export interface ContentsList {
     text: string; //大見出しのテキスト
-    more: boolean; //moreボタンを表示するか否か
+    more?: string; //moreボタンで遷移する先を指定
     children: React.ReactNode;
 }

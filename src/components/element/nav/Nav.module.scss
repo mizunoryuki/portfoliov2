@@ -1,4 +1,9 @@
 .menu {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .checkbox {
         display: none;
     }
@@ -23,9 +28,6 @@
     }
 
     .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
         z-index: 100;
         cursor: pointer;
