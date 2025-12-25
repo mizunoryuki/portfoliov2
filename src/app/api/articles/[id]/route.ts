@@ -6,9 +6,10 @@ export const revalidate = 300;
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: { id: string } },
-) {
-  const { id } = params;
+  { params }: { params: Promise<{ id: string }> },
+	) 
+  {
+  const { id } = await params;
 
   try {
     const article = await fetchArticleById(id, { revalidateSeconds: revalidate });
