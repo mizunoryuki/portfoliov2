@@ -6,7 +6,6 @@ const EyecatchSchema = z
     height: z.union([z.string(), z.number()]).optional(),
     width: z.union([z.string(), z.number()]).optional(),
   })
-  .partial()
   .nullish()
   .transform((value) => {
     const { url, height, width } = value ?? {};
