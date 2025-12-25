@@ -4,7 +4,6 @@ import ArticleCard from '@/components/element/article/ArticleCard';
 import Link from 'next/link';
 import { Title } from '@/components/element/title/Title';
 import { fetchArticles } from '@/libs/articles';
-import type { Article } from '@/types/article';
 import styles from './page.module.scss';
 
 type Props = {
