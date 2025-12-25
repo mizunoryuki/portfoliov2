@@ -1,23 +1,12 @@
 import ArticleCard from "@/components/element/article/ArticleCard";
 import { Contentslist } from "../contentslist/Contentslist";
-import { client } from "@/libs/client";
-import { Article } from "@/types/article";
+import { fetchArticles } from "@/libs/articles";
 
 export const ArticleList = async () => {
-    const blog = await client.get({ endpoint: "article" });
-
-    const articles: Article[] = (blog.contents as Article[]).map((c) => ({
-        id: c.id,
-        eyecatch: {
-            url: c.eyecatch?.url ?? '',
-            height: c.eyecatch?.height ?? '',
-            width: c.eyecatch?.width ?? '',
-        },
-        title: c.title || '',
-        tag: c.tag?.length ? c.tag : undefined,
-        contents: c.contents,
-        publishedAt: c.publishedAt ? new Date(c.publishedAt) : new Date(),
-    }));
+    const { contents: articles } = await fetchArticles({
+        limit: 4,
+        fields: 'id,title,eyecatch,publishedAt,tag,contents',
+    });
 
     const articleLength = articles.length;
     const MAX_DISPLAY = 4;
