@@ -24,10 +24,12 @@ export default function ArticleDetailServer({ article }: { article: Article }) {
 			)}
 			<h2 className={styles.title}>{article.title}</h2>
 			<div className={styles.publishedWrapper}>
-				<IoMdTime/>
-				<p>{convertedTime}</p>
+				<div className={styles.icon}>
+					<IoMdTime size={20}/>
+				</div>
+				<p className={styles.publishedAt}>{convertedTime}</p>
 			</div>
-			<div dangerouslySetInnerHTML={{ __html: article.contents || '内容の取得に失敗しました' }} className={styles.contents}/>
+			<div dangerouslySetInnerHTML={{ __html: article.contents || '内容の取得に失敗しました' }} className={styles.content}/>
 		</article>
 	);
 }

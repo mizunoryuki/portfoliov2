@@ -17,26 +17,32 @@
 	.title {
 		margin-top: 16px;
 		line-height: 100%;
-		font-size: var(--font-size-30);
+		font-size: var(--font-size-50);
+		font-family: var(--font-noto);
 	}
 
 	.publishedWrapper {
 
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		margin-top: 16px;
 		margin-bottom: 64px;
 		font-weight: bold;
 		opacity: 0.5;
 		gap: 5px;
-	}
-	
-	.contents {
-		p {
-
+		font-family: var(--font-noto);
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
+		.publishedAt {
+			padding-bottom: 2px;
+		}
+	}
 
+	.content {
+		margin-bottom: 50px;
 	}
 }
