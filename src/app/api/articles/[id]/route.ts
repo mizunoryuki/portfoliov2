@@ -5,9 +5,9 @@ export const revalidate = 300;
 
 export async function GET(
   _request: Request,
-  context: { params: { id: string } },
+  { params }: { params: { id: string } },
 ) {
-  const { id } = context.params;
+  const { id } = params;
   try {
     const article = await fetchArticleById(id, { revalidateSeconds: revalidate });
     return NextResponse.json(article);
