@@ -1,4 +1,4 @@
-import { ArticleListResponseSchema, ArticleSchema, type Article, type ArticleListResponse } from '@/types/article';
+import { ArticleIdListResponseSchema, ArticleListResponseSchema, ArticleSchema, type Article, type ArticleIdListResponse, type ArticleListResponse } from '@/types/article';
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || '';
 const apiKey = process.env.NEXT_PUBLIC_API_KEY || '';
@@ -68,14 +68,17 @@ export const fetchAllArticleIds = async (): Promise<string[]> => {
   const ids: string[] = [];
 
   while (true) {
-    const { contents, totalCount } = await fetchArticles(
-      { limit, offset, fields: 'id' },
-      { revalidateSeconds: 300 },
-    );
+    const url = new URL(BASE_URL);
+    url.searchParams.set('limit', String(limit));
+    url.searchParams.set('offset', String(offset));
+    url.searchParams.set('fields', 'id');
 
-    ids.push(...contents.map((c) => c.id));
+    const data = await fetchJson<ArticleIdListResponse>(url, { revalidateSeconds: 300 });
+    const parsed = ArticleIdListResponseSchema.parse(data);
+
+    ids.push(...parsed.contents.map((c) => c.id));
     offset += limit;
-    if (ids.length >= totalCount || contents.length === 0) break;
+    if (ids.length >= parsed.totalCount || parsed.contents.length === 0) break;
   }
 
   return ids;
