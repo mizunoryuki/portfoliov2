@@ -1,13 +1,10 @@
 import type { Article } from '@/types/article';
 import Image from 'next/image';
 import styles from './ArticleDetailServer.module.scss';
-import { convertTime } from '@/utils/convertTime';
 import { IoMdTime } from "react-icons/io";
 import { ArticleBackButton } from '../articlebackbutton/ArticleBackButton';
 
 export default function ArticleDetailServer({ article }: { article: Article }) {
-
-	const convertedTime = convertTime(article.publishedAt);
 
 	return (
 		<div>
@@ -30,7 +27,7 @@ export default function ArticleDetailServer({ article }: { article: Article }) {
 				<div className={styles.icon}>
 					<IoMdTime size={20}/>
 				</div>
-				<p className={styles.publishedAt}>{convertedTime}</p>
+				<p className={styles.publishedAt}>{article.publishedAt.toLocaleDateString('ja-JP')}</p>
 			</div>
 			<div dangerouslySetInnerHTML={{ __html: article.contents || '内容の取得に失敗しました' }} className={styles.content}/>
 		</article>

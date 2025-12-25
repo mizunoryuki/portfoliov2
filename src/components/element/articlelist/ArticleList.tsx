@@ -16,7 +16,7 @@ export const ArticleList = async () => {
         title: c.title || '',
         tag: c.tag?.length ? c.tag : undefined,
         contents: c.contents,
-        publishedAt: c.publishedAt || '',
+        publishedAt: c.publishedAt ? new Date(c.publishedAt) : new Date(),
     }));
 
     const articleLength = articles.length;
@@ -41,7 +41,7 @@ export const ArticleList = async () => {
                         title: 'Coming soon...',
                         tag: undefined,
                         contents: '',
-                        publishedAt: '',
+                        publishedAt: new Date(),
                     }}
                 />
             ))}
