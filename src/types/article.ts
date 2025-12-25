@@ -1,24 +1,36 @@
+import { z } from "zod";
 
-interface eyecatchConfig {
-	url: string,
-	height:string,
-	width:string
-}
+const EyecatchSchema = z
+  .object({
+    url: z.string().optional(),
+    height: z.union([z.string(), z.number()]).optional(),
+    width: z.union([z.string(), z.number()]).optional(),
+  })
+  .partial()
+  .nullish()
+  .transform((value) => {
+    const { url, height, width } = value ?? {};
+    return {
+      url: url ?? "",
+      height: `${height ?? ""}`,
+      width: `${width ?? ""}`,
+    };
+  });
 
-export interface Article {
-	id: string, 
-	eyecatch: eyecatchConfig, 
-	title: string, 
-	tag: string[] | undefined, 
-	contents: string | undefined,
-	publishedAt: string,
-}
+export const ArticleSchema = z.object({
+  id: z.string(),
+  eyecatch: EyecatchSchema,
+  title: z.string(),
+  tag: z.array(z.string()).optional(),
+  contents: z.string().optional(),
+  publishedAt: z.coerce.date(), // 文字列をDateオブジェクトに変換
+});
 
-export interface ArticleProps {
-	article: Article[]
-}
-export interface ArticleContent {
-	article: Article,
-	text:string,
-	color:string,
-}
+export const ArticleListResponseSchema = z.object({
+  contents: z.array(ArticleSchema).default([]),
+  totalCount: z.number().optional().default(0),
+});
+
+export type Article = z.infer<typeof ArticleSchema>;
+export type Articles = Article[];
+export type ArticleListResponse = z.infer<typeof ArticleListResponseSchema>;

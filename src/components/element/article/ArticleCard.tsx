@@ -29,7 +29,7 @@ export const ArticleCard = ({ article }: { article: Article }) => {
             </div>
             <div className={styles.body}>
                 <h3 className={styles.title}>{article.title}</h3>
-                <p className={styles.date}>{article.publishedAt}</p>
+                <p className={styles.date}>{article.id.startsWith('coming-soon-') ? '' : article.publishedAt.toLocaleDateString('ja-JP')}</p>
                 <p className={styles.excerpt}>{excerpt}{excerpt.length >= 140 ? '…' : ''}</p>
             </div>
         </Link>
