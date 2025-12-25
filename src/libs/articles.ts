@@ -61,3 +61,22 @@ export const fetchArticleById = async (
   const data = await fetchJson<Article>(url, options);
   return ArticleSchema.parse(data);
 };
+
+export const fetchAllArticleIds = async (): Promise<string[]> => {
+  const limit = 100;
+  let offset = 0;
+  const ids: string[] = [];
+
+  while (true) {
+    const { contents, totalCount } = await fetchArticles(
+      { limit, offset, fields: 'id' },
+      { revalidateSeconds: 300 },
+    );
+
+    ids.push(...contents.map((c) => c.id));
+    offset += limit;
+    if (ids.length >= totalCount || contents.length === 0) break;
+  }
+
+  return ids;
+};
