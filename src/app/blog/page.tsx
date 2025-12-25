@@ -35,7 +35,7 @@ export default async function Page({ searchParams }: Props) {
 
     return (
 		<div>
-		<Title text="Blog" color="#8efe3f" />
+		<Title text="Blog" color="var(--color-blog)" />
         <div className={styles.container}>
 
                 <div className={styles.list}>

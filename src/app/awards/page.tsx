@@ -4,7 +4,7 @@ import { Title } from "@/components/element/title/Title";
 export default function Page() {
     return (
         <div>
-            <Title text="Awards" color="#e14b88" />
+            <Title text="Awards" color="var(--color-awards)" />
             <Awardlist />
         </div>
     );

@@ -4,7 +4,7 @@ import { Linklist } from "@/components/element/linklist/Linklist";
 export default function Page() {
     return (
         <div>
-            <Title text="Contact" color="#2CD2BB" />
+            <Title text="Contact" color="var(--color-contact)" />
             <div className={styles.linkBox}>
                 <Linklist />
             </div>
