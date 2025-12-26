@@ -1,22 +1,21 @@
 import { RiExternalLinkFill } from "react-icons/ri";
 import styles from "./Product.module.scss";
 import Image from "next/image";
-import { ProductProps } from "@/types/products";
+import { ProductInfo } from "@/types/products";
 import Link from "next/link";
 const defaultImgUrl = "/preparing.png";
 
-export const Product = ({ description }: ProductProps) => {
-    const { id, imgUrl, title, explanation, tag } = description; // デフォルト値を設定
+export const ProductCard = (productDetail: {product: ProductInfo}) => {
+    const { id, eyecatch, title, description, tag } = productDetail.product; // デフォルト値を設定
 
     return (
         <Link className={styles.card} href={`/products/${id}`}>
             <div className={styles.image}>
                 <Image
-                    src={imgUrl || defaultImgUrl}
+                    src={eyecatch?.url || defaultImgUrl}
                     alt="product image"
-                    fill
                     quality={1}
-                    sizes="calc(100% / 2)"
+                    fill
                     priority
                 />
             </div>
@@ -31,7 +30,7 @@ export const Product = ({ description }: ProductProps) => {
                 <div className={styles.explanationContainer}>
                     <p>概要</p>
                     <div className={styles.descContainer}>
-                        <p className={styles.desc}>{explanation}</p>
+                        <p className={styles.desc}>{description}</p>
                     </div>
                 </div>
                 <div className={styles.tagContainer}>

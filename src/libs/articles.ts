@@ -1,4 +1,5 @@
 import { ArticleIdListResponseSchema, ArticleListResponseSchema, ArticleSchema, type Article, type ArticleIdListResponse, type ArticleListResponse } from '@/types/article';
+import { FetchOptions, ListParams } from './types';
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || '';
 const apiKey = process.env.NEXT_PUBLIC_API_KEY || '';
@@ -9,16 +10,6 @@ const ensureEnv = () => {
   if (!serviceDomain || !apiKey) {
     throw new Error('Missing microCMS credentials');
   }
-};
-
-type ListParams = {
-  limit?: number;
-  offset?: number;
-  fields?: string;
-};
-
-type FetchOptions = {
-  revalidateSeconds?: number;
 };
 
 const fetchJson = async <T>(url: URL, options?: FetchOptions): Promise<T> => {
