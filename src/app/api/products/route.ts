@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { fetchProducts } from '@/libs/products';
 
 export const runtime = 'edge';
 export const revalidate = 300;
 
-export async function GET(_req: NextRequest) {
+export async function GET() {
   try {
     const data = await fetchProducts({}, { revalidateSeconds: revalidate });
     return NextResponse.json(data);

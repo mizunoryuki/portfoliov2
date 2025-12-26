@@ -1,11 +1,17 @@
-export interface Description {
+export interface ProductInfo {
     id: string;
-    imgUrl?: string;
     title: string;
-    explanation: string;
+    description: string;
+    content: string;
+    eyecatch: {
+        url:string;
+        height:string;
+        width:string;
+    }
     tag: "ハッカソン" | "個人開発" | "演習";
 }
 
+
 export interface ProductProps {
-    description: Description;
+    description: ProductInfo;
 }

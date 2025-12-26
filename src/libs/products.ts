@@ -1,4 +1,4 @@
-import type { Description } from '@/types/products';
+import { ProductInfo } from "@/types/products";
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || '';
 const apiKey = process.env.NEXT_PUBLIC_API_KEY || '';
@@ -22,15 +22,8 @@ type FetchOptions = {
 };
 
 type ProductListResponse = {
-  contents: Description[];
+  contents: ProductInfo[];
   totalCount: number;
-};
-
-export type ProductDetail = {
-  post: Description;
-  content: string;
-  width?: number;
-  height?: number;
 };
 
 const fetchJson = async <T>(url: URL, options?: FetchOptions): Promise<T> => {
@@ -61,13 +54,19 @@ export const fetchProducts = async (
   if (params.offset !== undefined) url.searchParams.set('offset', String(params.offset));
   if (params.fields) url.searchParams.set('fields', params.fields);
 
-  const data = await fetchJson<any>(url, options);
-  const contents: Description[] = (data?.contents ?? []).map((item: any) => ({
+  const data = await fetchJson<ProductListResponse>(url, options);
+  const contents: ProductInfo[] = (data?.contents ?? []).map((item: ProductInfo) => (
+	{
     id: item.id,
-    imgUrl: item.eyecatch?.url,
     title: item.title ?? '',
+	description: item.description,
+	content : item.content,
+	eyecatch: {
+		url: item.eyecatch?.url ?? '',
+		height: item.eyecatch?.height ?? '',
+		width: item.eyecatch?.width ?? ''
+	},
     tag: Array.isArray(item.tag) ? item.tag[0] : item.tag,
-    explanation: item.description ?? '',
   }));
 
   return {
@@ -79,21 +78,21 @@ export const fetchProducts = async (
 export const fetchProductById = async (
   id: string,
   options?: FetchOptions,
-): Promise<ProductDetail> => {
+): Promise<ProductInfo> => {
   const url = new URL(`${BASE_URL}/${id}`);
-  const data = await fetchJson<any>(url, options);
+  const data = await fetchJson<ProductInfo>(url, options);
 
-  const detail: ProductDetail = {
-    post: {
-      id: data.id,
-      imgUrl: data.eyecatch?.url,
-      title: data.title ?? '',
-      tag: Array.isArray(data.tag) ? data.tag[0] : data.tag,
-      explanation: data.description ?? '',
-    },
-    content: data.content ?? '',
-    width: data.eyecatch?.width,
-    height: data.eyecatch?.height,
+  const detail: ProductInfo = {
+	id: data.id,
+	title: data.title ?? '',
+	tag: Array.isArray(data.tag) ? data.tag[0] : data.tag,
+	description: data.description ?? '',
+	content: data.content ?? '',
+	eyecatch : {
+		url: data.eyecatch?.url,
+		width: data.eyecatch?.width,
+		height: data.eyecatch?.height,
+	}
   };
 
   return detail;

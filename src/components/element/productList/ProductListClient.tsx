@@ -1,13 +1,13 @@
 "use client";
-import { Product } from "../product/Product";
+import { ProductCard } from "../product/Product";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import styles from "./ProductList.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
-import type { Description } from "@/types/products";
+import { type ProductInfo } from "@/types/products";
 
-export const ProductListClient = ({ products }: { products: Description[] }) => {
+export const ProductListClient = ({ products }: { products: ProductInfo[] }) => {
     if (!products?.length) return null;
 
     return (
@@ -41,7 +41,7 @@ export const ProductListClient = ({ products }: { products: Description[] }) => 
                         justifyContent: "center",
                     }}
                 >
-                    <Product description={element} />
+                    <ProductCard product={element} />
                 </SwiperSlide>
             ))}
         </Swiper>
