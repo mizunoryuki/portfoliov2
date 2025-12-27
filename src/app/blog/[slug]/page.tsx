@@ -1,14 +1,36 @@
 import ArticleDetailServer from '@/components/element/articledetailserver/ArticleDetailServer';
 import { fetchAllArticleIds, fetchArticleById } from '@/libs/articles';
 import type { Article } from '@/types/article';
+import { Metadata } from 'next';
 
-export default async function Page({
-    params,
-}: {
+type Props = {
     params: Promise<{ slug: string }>;
-}) {
-    const  id = await params;
-    const article: Article = await fetchArticleById(id.slug);
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+    const article: Article = await fetchArticleById(slug);
+
+    if (!article) {
+        return {
+            title: "Article Not Found",
+        };
+    }
+
+    return {
+        title: article.title,
+        openGraph: {
+            title: article.title,
+        },
+        twitter: {
+            title: article.title,
+        },
+    };
+}
+
+export default async function Page({ params }: Props) {
+    const { slug } = await params;
+    const article: Article = await fetchArticleById(slug);
 
     return <ArticleDetailServer article={article} />;
 }

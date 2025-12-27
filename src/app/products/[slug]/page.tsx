@@ -3,15 +3,36 @@ export const runtime = "edge";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { fetchProductById } from "@/libs/products";
+import { Metadata } from "next";
 
-// 記事詳細ページの生成
-export default async function BlogPostPage({
-    params,
-}: {
+type Props = {
     params: Promise<{ slug: string }>;
-}) {
-    const id = await params;
-    const info = await fetchProductById(id.slug);
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+    const info = await fetchProductById(slug);
+
+    if (!info) {
+        return { title: "Product Not Found" };
+    }
+
+    return {
+        title: info.title,
+        description: `${info.title}の詳細ページです。`, 
+        openGraph: {
+            description: `${info.title}の詳細ページです。`,
+        },
+        twitter: {
+            card: "summary_large_image",
+            description: `${info.title}の詳細ページです。`,
+        },
+    };
+}
+
+export default async function BlogPostPage({ params }: Props) {
+    const { slug } = await params; 
+    const info = await fetchProductById(slug);
 
     return (
         <main className={styles.container}>
@@ -20,7 +41,7 @@ export default async function BlogPostPage({
                     src={info.eyecatch?.url || "/preparing.png"}
                     alt="product image"
                     fill
-                    sizes="100"
+                    sizes="100vw"
                     priority
                 />
             </div>
