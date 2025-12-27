@@ -15,7 +15,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const product = await fetchProductById(slug, { revalidateSeconds: revalidate });
 
-  // Load font (Mochiy Pop One)
   const fontData = await fetch(
     new URL('https://github.com/google/fonts/raw/main/ofl/mochiypopone/MochiyPopOne-Regular.ttf'),
   ).then((res) => res.arrayBuffer());

@@ -40,7 +40,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
 					background: 'linear-gradient(135deg, #fef8ff 0%, #e8f1ff 50%, #fdf2ff 100%)',
 				}}
 			>
-				{/* タイトルカード */}
 				<div
 					style={{
 						position: 'relative',
@@ -70,7 +69,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
 					</div>
 				</div>
 
-				{/* ラベルと著者 */}
 				<div
 					style={{
 						position: 'absolute',
