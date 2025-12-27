@@ -19,14 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: info.title,
-        description: `${info.title}の詳細ページです。`, // または info.description があればそれを使う
+        description: `${info.title}の詳細ページです。`, 
         openGraph: {
-            title: info.title,
             description: `${info.title}の詳細ページです。`,
         },
         twitter: {
             card: "summary_large_image",
-            title: info.title,
             description: `${info.title}の詳細ページです。`,
         },
     };

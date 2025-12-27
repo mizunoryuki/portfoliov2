@@ -7,7 +7,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto" });
 
 export const metadata: Metadata = {
-    title: "mimimimimimi's portfolio",
+    title: {
+        default: "mimimimimimi's portfolio",
+        template: "%s | mimimimimimi's portfolio", // %s に各ページの title が入る
+    },
     description: "mimimimimimi is created",
     metadataBase: new URL("https://bike-bun-bun.com"),
     openGraph: {
