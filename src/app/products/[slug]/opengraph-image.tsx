@@ -17,7 +17,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
   // Load font (Mochiy Pop One)
   const fontData = await fetch(
-    'https://fonts.gstatic.com/s/mochiyonepop/v15/QldNNTtLsx4E__B0XTm6xLKyA6pALbpK.woff2',
+    new URL('https://github.com/google/fonts/raw/main/ofl/mochiypopone/MochiyPopOne-Regular.ttf'),
   ).then((res) => res.arrayBuffer());
 
   const title = product.title || 'Product';
@@ -25,46 +25,89 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          padding: '80px',
-          background: 'linear-gradient(135deg, #0f172a, #1e293b)',
-          color: 'white',
-          fontFamily: 'Mochiy Pop One, sans-serif',
-        }}
-      >
-        <div
-          style={{
-            fontSize: 60,
-            fontWeight: '700',
-            lineHeight: 1.2,
-            maxWidth: '100%',
-            wordBreak: 'break-word',
-          }}
-        >
-          {title}
-        </div>
-        {description ? (
-          <div
-            style={{
-              marginTop: 30,
-              fontSize: 28,
-              lineHeight: 1.4,
-              opacity: 0.9,
-              maxHeight: 200,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            {description}
-          </div>
-        ) : null}
-      </div>
+		<div
+		style={{
+			position: 'relative',
+			display: 'flex',
+			flexDirection: 'column',
+			height: '100%',
+			width: '100%',
+			alignItems: 'center',
+			justifyContent: 'center',
+			padding: '60px',
+			boxSizing: 'border-box',
+			fontFamily: '"Mochiy Pop One"',
+			background: 'linear-gradient(135deg, #fef8ff 0%, #e8f1ff 50%, #fdf2ff 100%)',
+		}}
+	>
+		<div
+			style={{
+				position: 'relative',
+				zIndex: 1,
+				maxWidth: 760,
+				width: '100%',
+				borderRadius: 32,
+				padding: '48px 56px',
+				textAlign: 'center',
+				backdropFilter: 'blur(6px)',
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}
+		>
+			<div
+				style={{
+					fontSize: 70,
+					fontWeight: 800,
+					lineHeight: 1.3,
+					wordBreak: 'break-word',
+					color: '#0f172a',
+					textShadow: '0 4px 18px rgba(255, 255, 255, 0.6)',
+				}}
+			>
+				{title}
+			</div>
+		</div>
+
+		<div
+			style={{
+				position: 'absolute',
+				top: 40,
+				left: 0,
+				right: 0,
+				justifyContent: 'center',
+				display: 'flex',
+				alignItems: 'center',
+				gap: 12,
+			}}
+		>
+			<div
+				style={{
+					padding: '8px 20px',
+					background: '#3D8D7A',
+					color: 'white',
+					fontSize: 26,
+					fontWeight: 700,
+				}}
+			>
+				PRODUCT
+			</div>
+		</div>
+
+		<div
+			style={{
+				position: 'absolute',
+				bottom: 40,
+				right: 60,
+				padding: '10px 18px',
+				color: '#0f172a',
+				fontSize: 28,
+				fontWeight: 700,
+			}}
+		>
+			{description}	
+		</div>
+	</div>
     ),
     {
       ...size,
