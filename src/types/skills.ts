@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
 export interface SkillItem {
-    heading: string;
-    icons: ReactNode[];
+  heading: string;
+  icons: ReactNode[];
 }

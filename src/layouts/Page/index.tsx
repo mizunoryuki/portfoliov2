@@ -3,16 +3,16 @@ import styles from "./index.module.scss";
 import { Header } from "@/components/global/Header";
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export default function PageLayout(props: Props): ReactElement {
-    const { children } = props;
+  const { children } = props;
 
-    return (
-        <>
-            <Header />
-            <main className={styles.main}>{children}</main>
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <main className={styles.main}>{children}</main>
+    </>
+  );
 }

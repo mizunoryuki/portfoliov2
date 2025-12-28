@@ -1,14 +1,21 @@
-import { ArticleIdListResponseSchema, ArticleListResponseSchema, ArticleSchema, type Article, type ArticleIdListResponse, type ArticleListResponse } from '@/types/article';
-import { FetchOptions, ListParams } from './types';
+import {
+  ArticleIdListResponseSchema,
+  ArticleListResponseSchema,
+  ArticleSchema,
+  type Article,
+  type ArticleIdListResponse,
+  type ArticleListResponse,
+} from "@/types/article";
+import { FetchOptions, ListParams } from "./types";
 
-const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || '';
-const apiKey = process.env.NEXT_PUBLIC_API_KEY || '';
+const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "";
+const apiKey = process.env.NEXT_PUBLIC_API_KEY || "";
 
 const BASE_URL = `https://${serviceDomain}.microcms.io/api/v1/article`;
 
 const ensureEnv = () => {
   if (!serviceDomain || !apiKey) {
-    throw new Error('Missing microCMS credentials');
+    throw new Error("Missing microCMS credentials");
   }
 };
 
@@ -16,11 +23,11 @@ const fetchJson = async <T>(url: URL, options?: FetchOptions): Promise<T> => {
   ensureEnv();
   const res = await fetch(url.toString(), {
     headers: {
-      'X-MICROCMS-API-KEY': apiKey,
+      "X-MICROCMS-API-KEY": apiKey,
     },
     next: {
       revalidate: options?.revalidateSeconds ?? 300,
-      tags: ['articles'],
+      tags: ["articles"],
     },
   });
 
@@ -36,9 +43,11 @@ export const fetchArticles = async (
   options?: FetchOptions,
 ): Promise<ArticleListResponse> => {
   const url = new URL(BASE_URL);
-  if (params.limit !== undefined) url.searchParams.set('limit', String(params.limit));
-  if (params.offset !== undefined) url.searchParams.set('offset', String(params.offset));
-  if (params.fields) url.searchParams.set('fields', params.fields);
+  if (params.limit !== undefined)
+    url.searchParams.set("limit", String(params.limit));
+  if (params.offset !== undefined)
+    url.searchParams.set("offset", String(params.offset));
+  if (params.fields) url.searchParams.set("fields", params.fields);
 
   const data = await fetchJson<ArticleListResponse>(url, options);
   return ArticleListResponseSchema.parse(data);
@@ -60,11 +69,13 @@ export const fetchAllArticleIds = async (): Promise<string[]> => {
 
   while (true) {
     const url = new URL(BASE_URL);
-    url.searchParams.set('limit', String(limit));
-    url.searchParams.set('offset', String(offset));
-    url.searchParams.set('fields', 'id');
+    url.searchParams.set("limit", String(limit));
+    url.searchParams.set("offset", String(offset));
+    url.searchParams.set("fields", "id");
 
-    const data = await fetchJson<ArticleIdListResponse>(url, { revalidateSeconds: 300 });
+    const data = await fetchJson<ArticleIdListResponse>(url, {
+      revalidateSeconds: 300,
+    });
     const parsed = ArticleIdListResponseSchema.parse(data);
 
     ids.push(...parsed.contents.map((c) => c.id));

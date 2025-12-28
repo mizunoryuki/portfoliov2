@@ -1,67 +1,73 @@
 :root {
-    --foreground: #000000;
-    --background: #fbfbfb;
-    --font-base: var(--font-inter);
-    --font-noto: var(--font-noto);
-    --font-size-10: 0.625rem;
-    --font-size-20: 1.25rem;
-    --font-size-30: 1.875rem;
-    --font-size-50: 3.125rem;
-    --gap-size-15: 15px;
-    --gap-size-30: 30px;
-    --shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.35);
-    --radius-10: 10px;
-    --radius-30: 30px;
-    --background-1: #e8f9ff;
-    --background-2: #c4d9ff;
-    --background-3: #c5baff;
+  --foreground: #000000;
+  --background: #fbfbfb;
+  --font-base: var(--font-inter);
+  --font-noto: var(--font-noto);
+  --font-size-10: 0.625rem;
+  --font-size-20: 1.25rem;
+  --font-size-30: 1.875rem;
+  --font-size-50: 3.125rem;
+  --gap-size-15: 15px;
+  --gap-size-30: 30px;
+  --shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.35);
+  --radius-10: 10px;
+  --radius-30: 30px;
+  --background-1: #e8f9ff;
+  --background-2: #c4d9ff;
+  --background-3: #c5baff;
 
-    --color-aboutme: #ff5b12;
-    --color-contact: #2cd2bb;
-    --color-product-green: #8efe3f;
-    --color-product-purple: #7509c3;
-    --color-award: #e14b88;
-    --color-blog: #c4d9ff;
+  --color-aboutme: #ff5b12;
+  --color-contact: #2cd2bb;
+  --color-product-green: #8efe3f;
+  --color-product-purple: #7509c3;
+  --color-award: #e14b88;
+  --color-blog: #c4d9ff;
 }
 
 html,
 body {
-    max-width: 100vw;
-    height: auto;
+  max-width: 100vw;
+  height: auto;
 }
 
 html {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: var(--font-base), "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  color: var(--foreground);
+  background: var(--background);
+  font-family:
+    var(--font-base),
+    "Inter",
+    "Noto Sans JP",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.use-inter {
-    --font-base: var(--font-inter);
+  --font-base: var(--font-inter);
 }
 
 body.use-noto {
-    --font-base: var(--font-noto);
+  --font-base: var(--font-noto);
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
-    :root {
-        --font-size-10: 0.625rem;
-        --font-size-20: 1.25rem;
-        --font-size-30: 1.5rem;
-        --font-size-50: 2rem;
-    }
+  :root {
+    --font-size-10: 0.625rem;
+    --font-size-20: 1.25rem;
+    --font-size-30: 1.5rem;
+    --font-size-50: 2rem;
+  }
 }

@@ -1,4 +1,4 @@
 export interface TitleProps {
-    text: string;
-    color?: string;
+  text: string;
+  color?: string;
 }
