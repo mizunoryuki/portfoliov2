@@ -1,9 +1,11 @@
-export const runtime = "edge";
-
+import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./page.module.scss";
+
 import { fetchProductById } from "@/libs/products";
-import { Metadata } from "next";
+
+import styles from "./page.module.scss";
+
+export const runtime = "edge";
 
 type Props = {
   params: Promise<{ slug: string }>;

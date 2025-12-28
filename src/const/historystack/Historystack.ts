@@ -1,4 +1,4 @@
-import { Historyinfo } from "@/types/history";
+import type { Historyinfo } from "@/types/history";
 
 export const Historystack: Historyinfo[] = [
   {

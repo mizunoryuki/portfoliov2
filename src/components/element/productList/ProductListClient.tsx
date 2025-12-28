@@ -1,11 +1,14 @@
 "use client";
-import { ProductCard } from "../product/Product";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import styles from "./ProductList.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
+
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { type ProductInfo } from "@/types/products";
+
+import { ProductCard } from "../product/Product";
+import styles from "./ProductList.module.scss";
 
 export const ProductListClient = ({
   products,

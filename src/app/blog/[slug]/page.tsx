@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
+
 import ArticleDetailServer from "@/components/element/articledetailserver/ArticleDetailServer";
 import { fetchAllArticleIds, fetchArticleById } from "@/libs/articles";
 import type { Article } from "@/types/article";
-import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string }>;

@@ -1,9 +1,11 @@
+import type { Historyinfo } from "@/types/history";
+
 import styles from "./History.module.scss";
-import { Historyinfo } from "@/types/history";
+
 export const History = ({ date, title, content }: Historyinfo) => {
   return (
     <div className={styles.container}>
-      <div className={styles.border}></div>
+      <div className={styles.border} />
       <div className={styles.content}>
         <div className={styles.left}>
           <p>

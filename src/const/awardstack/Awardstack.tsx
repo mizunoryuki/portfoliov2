@@ -1,4 +1,5 @@
-import { Award } from "@/types/awards";
+import type { Award } from "@/types/awards";
+
 export const Awardstack: Award[] = [
   {
     prize: "企業賞",

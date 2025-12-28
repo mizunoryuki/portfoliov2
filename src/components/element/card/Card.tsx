@@ -1,12 +1,14 @@
-import { IoMdArrowRoundForward } from "react-icons/io";
-import styles from "./Card.module.scss";
 import Link from "next/link";
-import { Content } from "@/types/top";
+import { IoMdArrowRoundForward } from "react-icons/io";
+
+import type { Content } from "@/types/top";
+
+import styles from "./Card.module.scss";
 
 export const Card = ({ text, url, color = "var(--background-2)" }: Content) => {
   return (
     <Link href={`/${url}`} className={styles.cardBox}>
-      <div className={styles.image}></div>
+      <div className={styles.image} />
       <div className={styles.textContainer}>
         <p>{text}</p>
         <IoMdArrowRoundForward size={15} />
@@ -16,7 +18,7 @@ export const Card = ({ text, url, color = "var(--background-2)" }: Content) => {
         style={{
           backgroundColor: color,
         }}
-      ></div>
+       />
     </Link>
   );
 };

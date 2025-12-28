@@ -1,9 +1,10 @@
-import { FaXTwitter } from "react-icons/fa6";
-import styles from "./Header.module.scss";
-import { IoLogoInstagram } from "react-icons/io";
-import { FiGithub } from "react-icons/fi";
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
+import { IoLogoInstagram } from "react-icons/io";
+
 import { Nav } from "../element/nav/Nav";
+import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (

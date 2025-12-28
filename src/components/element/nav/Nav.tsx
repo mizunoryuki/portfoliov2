@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { RiCloseFill } from "react-icons/ri";
+
 import styles from "./Nav.module.scss";
-import { useState } from "react";
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);

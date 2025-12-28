@@ -1,6 +1,8 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP } from "next/font/google";
-import "./globals.css";
+
 import PageLayout from "@/layouts/Page";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });

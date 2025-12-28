@@ -1,8 +1,9 @@
-import { Contentslist } from "@/components/element/contentslist/Contentslist";
-import styles from "./page.module.css";
-import { Card } from "@/components/element/card/Card";
-import { Top } from "@/components/element/top/Top";
 import { ArticleList } from "@/components/element/articlelist/ArticleList";
+import { Card } from "@/components/element/card/Card";
+import { Contentslist } from "@/components/element/contentslist/Contentslist";
+import { Top } from "@/components/element/top/Top";
+
+import styles from "./page.module.css";
 
 export default function Home() {
   return (

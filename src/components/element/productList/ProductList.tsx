@@ -1,4 +1,5 @@
 import { fetchProducts } from "@/libs/products";
+
 import { ProductListClient } from "./ProductListClient";
 
 export const ProductList = async () => {

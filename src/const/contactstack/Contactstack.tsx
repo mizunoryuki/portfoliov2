@@ -1,7 +1,8 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { IoIosMail, IoLogoInstagram } from "react-icons/io";
-import { Contact } from "@/types/contact";
+
+import type { Contact } from "@/types/contact";
 
 const sizenum = 70;
 

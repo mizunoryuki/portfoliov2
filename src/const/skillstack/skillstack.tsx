@@ -1,3 +1,14 @@
+import { BsFiletypeScss } from "react-icons/bs";
+import {
+  FaFigma,
+  FaGitAlt,
+  FaGithub,
+  FaJava,
+  FaMarkdown,
+  FaNodeJs,
+  FaPython,
+  FaSass,
+} from "react-icons/fa6";
 import {
   SiC,
   SiCanva,
@@ -14,18 +25,9 @@ import {
   SiTypescript,
   SiVite,
 } from "react-icons/si";
-import {
-  FaFigma,
-  FaGitAlt,
-  FaGithub,
-  FaJava,
-  FaMarkdown,
-  FaNodeJs,
-  FaPython,
-  FaSass,
-} from "react-icons/fa6";
-import { BsFiletypeScss } from "react-icons/bs";
-import { SkillItem } from "@/types/skills";
+
+import type { SkillItem } from "@/types/skills";
+
 const sizenum: number = 45;
 
 export const skillData: SkillItem[] = [

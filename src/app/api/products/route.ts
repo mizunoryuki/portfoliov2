@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+
 import { fetchProducts } from "@/libs/products";
 
 export const runtime = "edge";

@@ -1,6 +1,7 @@
 import ArticleCard from "@/components/element/article/ArticleCard";
-import { Contentslist } from "../contentslist/Contentslist";
 import { fetchArticles } from "@/libs/articles";
+
+import { Contentslist } from "../contentslist/Contentslist";
 
 export const ArticleList = async () => {
   const { contents: articles } = await fetchArticles({

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+
 import { fetchProductById } from "@/libs/products";
 
 export const runtime = "edge";

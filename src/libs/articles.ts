@@ -1,12 +1,13 @@
 import {
-  ArticleIdListResponseSchema,
-  ArticleListResponseSchema,
-  ArticleSchema,
   type Article,
   type ArticleIdListResponse,
+  ArticleIdListResponseSchema,
   type ArticleListResponse,
+  ArticleListResponseSchema,
+  ArticleSchema,
 } from "@/types/article";
-import { FetchOptions, ListParams } from "./types";
+
+import type { FetchOptions, ListParams } from "./types";
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "";
 const apiKey = process.env.NEXT_PUBLIC_API_KEY || "";

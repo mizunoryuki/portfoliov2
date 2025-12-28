@@ -1,7 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
-import styles from "./ArticleCard.module.scss";
+import Link from "next/link";
+
 import type { Article } from "@/types/article";
+
+import styles from "./ArticleCard.module.scss";
 
 export const ArticleCard = ({ article }: { article: Article }) => {
   const excerpt = (article.contents || "")

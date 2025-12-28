@@ -1,4 +1,5 @@
 import styles from "./Aboutme.module.scss";
+
 export const Aboutme = () => {
   return (
     <div className={styles.container}>
@@ -25,7 +26,7 @@ export const Aboutme = () => {
             <p>バイク,読書,Twitter</p>
           </li>
         </ul>
-        <div className={styles.right}></div>
+        <div className={styles.right} />
       </div>
       <div className={styles.info}>
         <div className={styles.message}>

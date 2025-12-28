@@ -1,6 +1,8 @@
+import { Awardstack } from "@/const/awardstack/Awardstack";
+
 import { Award } from "../award/Award";
 import styles from "./Awardlist.module.scss";
-import { Awardstack } from "@/const/awardstack/Awardstack";
+
 export const Awardlist = () => {
   return (
     <div className={styles.awards}>

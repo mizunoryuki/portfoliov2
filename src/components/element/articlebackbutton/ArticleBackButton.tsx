@@ -1,7 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5";
+
 import styles from "./ArticleBackButton.module.scss";
+
 export function ArticleBackButton() {
   const router = useRouter();
   return (

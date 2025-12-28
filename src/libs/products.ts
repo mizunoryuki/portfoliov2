@@ -1,4 +1,4 @@
-import { ProductInfo } from "@/types/products";
+import type { ProductInfo } from "@/types/products";
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "";
 const apiKey = process.env.NEXT_PUBLIC_API_KEY || "";

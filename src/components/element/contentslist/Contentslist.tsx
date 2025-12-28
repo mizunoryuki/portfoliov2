@@ -1,8 +1,10 @@
 "use client";
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import styles from "./Contentslist.module.scss";
-import { ContentsList } from "@/types/top";
 import { useRouter } from "next/navigation";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+
+import type { ContentsList } from "@/types/top";
+
+import styles from "./Contentslist.module.scss";
 
 export const Contentslist: React.FC<ContentsList> = ({
   text,

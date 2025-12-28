@@ -1,8 +1,10 @@
-import type { Article } from "@/types/article";
 import Image from "next/image";
-import styles from "./ArticleDetailServer.module.scss";
 import { IoMdTime } from "react-icons/io";
+
+import type { Article } from "@/types/article";
+
 import { ArticleBackButton } from "../articlebackbutton/ArticleBackButton";
+import styles from "./ArticleDetailServer.module.scss";
 
 export default function ArticleDetailServer({ article }: { article: Article }) {
   return (

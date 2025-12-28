@@ -1,10 +1,12 @@
-export const runtime = "edge";
+import Link from "next/link";
 
 import ArticleCard from "@/components/element/article/ArticleCard";
-import Link from "next/link";
 import { Title } from "@/components/element/title/Title";
 import { fetchArticles } from "@/libs/articles";
+
 import styles from "./page.module.scss";
+
+export const runtime = "edge";
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;

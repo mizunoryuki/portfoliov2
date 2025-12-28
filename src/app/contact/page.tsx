@@ -1,6 +1,8 @@
-import { Title } from "@/components/element/title/Title";
-import styles from "./page.module.scss";
 import { Linklist } from "@/components/element/linklist/Linklist";
+import { Title } from "@/components/element/title/Title";
+
+import styles from "./page.module.scss";
+
 export default function Page() {
   return (
     <div>

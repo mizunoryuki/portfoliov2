@@ -1,8 +1,11 @@
-import { RiExternalLinkFill } from "react-icons/ri";
-import styles from "./Product.module.scss";
 import Image from "next/image";
-import { ProductInfo } from "@/types/products";
 import Link from "next/link";
+import { RiExternalLinkFill } from "react-icons/ri";
+
+import type { ProductInfo } from "@/types/products";
+
+import styles from "./Product.module.scss";
+
 const defaultImgUrl = "/preparing.png";
 
 export const ProductCard = (productDetail: { product: ProductInfo }) => {

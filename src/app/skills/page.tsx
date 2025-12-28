@@ -1,7 +1,9 @@
-import { Title } from "@/components/element/title/Title";
-import styles from "./page.module.scss";
 import { Skilllist } from "@/components/element/skilllist/Skilllist";
+import { Title } from "@/components/element/title/Title";
 import { skillData } from "@/const/skillstack/skillstack";
+
+import styles from "./page.module.scss";
+
 export default function Page() {
   return (
     <div className={styles.page}>
