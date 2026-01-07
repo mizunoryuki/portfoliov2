@@ -28,29 +28,45 @@ export const Nav = () => {
       </label>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
-          <li onClick={handleOpenNav}>
-            <Link href={"/"}>Top</Link>
+          <li>
+            <Link href={"/"} onClick={handleOpenNav}>
+              Top
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/aboutme"}>Aboutme</Link>
+          <li>
+            <Link href={"/aboutme"} onClick={handleOpenNav}>
+              Aboutme
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/skills"}>Skills</Link>
+          <li>
+            <Link href={"/skills"} onClick={handleOpenNav}>
+              Skills
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/blog"}>Blog</Link>
+          <li>
+            <Link href={"/blog"} onClick={handleOpenNav}>
+              Blog
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/products"}>Products</Link>
+          <li>
+            <Link href={"/products"} onClick={handleOpenNav}>
+              Products
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/awards"}>Awards</Link>
+          <li>
+            <Link href={"/awards"} onClick={handleOpenNav}>
+              Awards
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/hobby"}>Hobby</Link>
+          <li>
+            <Link href={"/hobby"} onClick={handleOpenNav}>
+              Hobby
+            </Link>
           </li>
-          <li onClick={handleOpenNav}>
-            <Link href={"/contact"}>Contact</Link>
+          <li>
+            <Link href={"/contact"} onClick={handleOpenNav}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
