@@ -1,4 +1,4 @@
-export interface ProductInfo {
+export type ProductInfo = {
   id: string;
   title: string;
   description: string;
@@ -11,6 +11,6 @@ export interface ProductInfo {
   tag: "ハッカソン" | "個人開発" | "演習";
 }
 
-export interface ProductProps {
+export type ProductProps = {
   description: ProductInfo;
 }

@@ -4,7 +4,7 @@ import { Header } from "@/components/global/Header";
 
 import styles from "./index.module.scss";
 
-interface Props {
+type Props = {
   children: ReactNode;
 }
 

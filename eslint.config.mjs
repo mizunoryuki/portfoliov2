@@ -28,12 +28,12 @@ export default tseslint.config([
     plugins: {
       "simple-import-sort": simpleImportSort,
       "jsx-a11y": jsxA11y,
-      "unused-imports": unusedImports, // 追加
+      "unused-imports": unusedImports,
     },
     rules: {
       "no-console": "warn",
       "prefer-const": "error",
-      "no-unused-vars": "off",
+      "no-unused-vars": "error",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_" },
@@ -54,7 +54,7 @@ export default tseslint.config([
       "import/no-default-export": "error",
       "react/jsx-no-duplicate-props": ["error", { ignoreCase: true }],
       "no-dupe-keys": "error",
-      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
         "warn",
@@ -65,6 +65,18 @@ export default tseslint.config([
           argsIgnorePattern: "^_",
         },
       ],
+      complexity: ["warn", 10],
+      "max-depth": ["warn", 3],
+      "max-lines": [
+        "warn",
+        { max: 300, skipBlankLines: true, skipComments: true },
+      ],
+
+      "react/no-array-index-key": "error",
+      "react/jsx-pascal-case": "error", 
+
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"], 
       ...jsxA11y.configs.recommended.rules,
     },
     settings: {

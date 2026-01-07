@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export interface SkillItem {
+export type SkillItem = {
   heading: string;
   icons: ReactNode[];
 }

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import styles from "./Skilllist.module.scss";
 
-interface Props {
+type Props = {
   heading: string; //スキルの分類を書くテキスト
   children: ReactNode; //
 }

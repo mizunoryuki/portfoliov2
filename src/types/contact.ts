@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 
-export interface Contact {
+export type Contact = {
   name: string;
   id: string;
   url: string;
   icon: ReactNode;
 }
-export interface ContactProps {
+export type ContactProps = {
   contact: Contact;
 }
