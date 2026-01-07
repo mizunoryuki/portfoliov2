@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-export interface SkillItem {
-    heading: string;
-    icons: ReactNode[];
+export type SkillItem = {
+  heading: string;
+  icons: ReactNode[];
 }

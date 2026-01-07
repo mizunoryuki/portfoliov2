@@ -1,14 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { fetchArticles } from '@/libs/articles';
+import type { NextRequest} from "next/server";
+import { NextResponse } from "next/server";
 
-export const runtime = 'edge';
+import { fetchArticles } from "@/libs/articles";
+
+export const runtime = "edge";
 export const revalidate = 300;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const limit = searchParams.get('limit');
-  const offset = searchParams.get('offset');
-  const fields = searchParams.get('fields') || 'id,title,eyecatch,publishedAt,tag,contents';
+  const limit = searchParams.get("limit");
+  const offset = searchParams.get("offset");
+  const fields =
+    searchParams.get("fields") || "id,title,eyecatch,publishedAt,tag,contents";
 
   try {
     const data = await fetchArticles(
@@ -23,7 +26,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
-      { message: 'Failed to fetch articles', error: (error as Error).message },
+      { message: "Failed to fetch articles", error: (error as Error).message },
       { status: 500 },
     );
   }

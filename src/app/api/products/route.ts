@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server';
-import { fetchProducts } from '@/libs/products';
+import { NextResponse } from "next/server";
 
-export const runtime = 'edge';
+import { fetchProducts } from "@/libs/products";
+
+export const runtime = "edge";
 export const revalidate = 300;
 
 export async function GET() {
@@ -10,7 +11,7 @@ export async function GET() {
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
-      { message: 'Failed to fetch products', error: (error as Error).message },
+      { message: "Failed to fetch products", error: (error as Error).message },
       { status: 500 },
     );
   }

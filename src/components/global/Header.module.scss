@@ -1,55 +1,55 @@
 .headerbox {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    margin-top: 15px;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 10px 15px 10px 15px;
-    width: calc(100% - 60px);
-    height: 50px;
-    border-radius: var(--radius-10);
-    box-shadow: var(--shadow);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  margin-top: 15px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 10px 15px 10px 15px;
+  width: calc(100% - 60px);
+  height: 50px;
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow);
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--background);
+
+  .linkbox {
+    margin-left: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    background-color: var(--background);
+    gap: 30px;
 
-    .linkbox {
-        margin-left: auto;
+    .icon {
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-10);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      a {
         display: flex;
-        flex-direction: row;
-        gap: 30px;
-
-        .icon {
-            width: 30px;
-            height: 30px;
-            border-radius: var(--radius-10);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        .icon:active {
-            scale: 0.95;
-        }
+        align-items: center;
+        justify-content: center;
+      }
     }
+    .icon:active {
+      scale: 0.95;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .headerbox {
-        .linkbox {
-            .icon {
-                display: none;
-                background-color: var(--background-2);
-            }
-        }
+  .headerbox {
+    .linkbox {
+      .icon {
+        display: none;
+        background-color: var(--background-2);
+      }
     }
+  }
 }

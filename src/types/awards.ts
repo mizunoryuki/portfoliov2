@@ -1,10 +1,10 @@
-export interface Award {
-    prize: string;
-    tournament: string;
-    date: string;
-    name: string;
+export type Award = {
+  prize: string;
+  tournament: string;
+  date: string;
+  name: string;
 }
 
-export interface AwardInfo {
-    award: Award;
+export type AwardInfo = {
+  award: Award;
 }

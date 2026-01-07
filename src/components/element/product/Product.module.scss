@@ -1,91 +1,91 @@
 .card {
-    width: calc(100% / 2);
-    width: 300px;
-    height: 440px;
-    padding: var(--gap-size-15);
+  width: calc(100% / 2);
+  width: 300px;
+  height: 440px;
+  padding: var(--gap-size-15);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+
+  margin-bottom: 30px;
+
+  .image {
+    z-index: 1;
+    position: relative;
+    width: auto;
+    height: 50%;
+    box-sizing: border-box;
+    background-color: var(--color-product-green);
     border-radius: var(--radius-10);
-    box-shadow: var(--shadow);
-    text-decoration: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    margin-bottom: 30px;
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: calc(50% - 10px);
+    margin-top: 10px;
 
-    .image {
-        z-index: 1;
-        position: relative;
-        width: auto;
-        height: 50%;
-        box-sizing: border-box;
-        background-color: var(--color-product-green);
-        border-radius: var(--radius-10);
-        overflow: hidden;
+    .titleContainer {
+      > p {
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .title {
+        text-decoration: underline var(--background-2);
+        margin-left: 13px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .explanationContainer {
+      flex-grow: 1;
+      > p {
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .descContainer {
+        margin-top: 3px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        .desc {
+          margin-left: 13px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          overflow: hidden;
+        }
+      }
     }
 
-    .product {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: calc(50% - 10px);
-        margin-top: 10px;
+    .tagContainer {
+      width: fit-content;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: var(--radius-30);
+      border: 1px solid var(--color-product-purple);
+      box-sizing: border-box;
+      padding: 5px;
+      margin-left: auto;
+      color: var(--color-product-purple);
 
-        .titleContainer {
-            > p {
-                font-size: 13px;
-                font-weight: bold;
-            }
-            .title {
-                text-decoration: underline var(--background-2);
-                margin-left: 13px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-
-        .explanationContainer {
-            flex-grow: 1;
-            > p {
-                font-size: 13px;
-                font-weight: bold;
-            }
-
-            .descContainer {
-                margin-top: 3px;
-                display: flex;
-                align-items: center;
-                .desc {
-                    margin-left: 13px;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    line-clamp: 3;
-                    overflow: hidden;
-                }
-            }
-        }
-
-        .tagContainer {
-            width: fit-content;
-            font-size: 10px;
-            font-weight: bold;
-            border-radius: var(--radius-30);
-            border: 1px solid var(--color-product-purple);
-            box-sizing: border-box;
-            padding: 5px;
-            margin-left: auto;
-            color: var(--color-product-purple);
-
-            span {
-                margin-right: 3px;
-            }
-        }
+      span {
+        margin-right: 3px;
+      }
     }
+  }
 
-    &:hover {
-        scale: 1.03;
-        transition: 0.5s;
-    }
+  &:hover {
+    scale: 1.03;
     transition: 0.5s;
+  }
+  transition: 0.5s;
 }
