@@ -5,7 +5,7 @@ export type Contact = {
   id: string;
   url: string;
   icon: ReactNode;
-}
+};
 export type ContactProps = {
   contact: Contact;
-}
+};

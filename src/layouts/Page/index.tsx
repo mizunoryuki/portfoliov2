@@ -6,7 +6,7 @@ import styles from "./index.module.scss";
 
 type Props = {
   children: ReactNode;
-}
+};
 
 export default function PageLayout(props: Props): ReactElement {
   const { children } = props;

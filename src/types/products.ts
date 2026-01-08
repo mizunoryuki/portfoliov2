@@ -9,8 +9,8 @@ export type ProductInfo = {
     width: string;
   };
   tag: "ハッカソン" | "個人開発" | "演習";
-}
+};
 
 export type ProductProps = {
   description: ProductInfo;
-}
+};
