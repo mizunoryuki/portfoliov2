@@ -18,7 +18,7 @@ export const Card = ({ text, url, color = "var(--background-2)" }: Content) => {
         style={{
           backgroundColor: color,
         }}
-       />
+      />
     </Link>
   );
 };
