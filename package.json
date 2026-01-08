@@ -13,7 +13,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.14.6",
@@ -33,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript/native-preview": "7.0.0-dev.20260107.1",
     "eslint": "^9.39.2",
     "eslint-config-next": "15.1.9",
     "eslint-config-prettier": "^10.1.8",
