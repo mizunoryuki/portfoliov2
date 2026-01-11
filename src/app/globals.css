@@ -2,7 +2,6 @@
   --foreground: #000000;
   --background: #fbfbfb;
   --font-base: var(--font-inter);
-  --font-noto: var(--font-noto);
   --font-size-10: 0.625rem;
   --font-size-20: 1.25rem;
   --font-size-30: 1.875rem;
@@ -51,10 +50,6 @@ body {
 
 body.use-inter {
   --font-base: var(--font-inter);
-}
-
-body.use-noto {
-  --font-base: var(--font-noto);
 }
 
 * {

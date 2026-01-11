@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Comfortaa, Inter, Noto_Sans_JP } from "next/font/google";
 
 import PageLayout from "@/layouts/Page";
 
@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJp = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-noto",
+});
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  variable: "--font-comfortaa",
 });
 
 export const metadata: Metadata = {
@@ -43,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.variable} ${notoSansJp.variable}`}>
+      <body
+        className={`${inter.variable} ${notoSansJp.variable} ${comfortaa.variable}`}
+      >
         <PageLayout>{children}</PageLayout>
       </body>
     </html>

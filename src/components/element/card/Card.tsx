@@ -10,7 +10,7 @@ export const Card = ({ text, url, color = "var(--background-2)" }: Content) => {
     <Link href={`/${url}`} className={styles.cardBox}>
       <div className={styles.image} />
       <div className={styles.textContainer}>
-        <p>{text}</p>
+        <p className={styles.text}>{text}</p>
         <IoMdArrowRoundForward size={15} />
       </div>
       <div
