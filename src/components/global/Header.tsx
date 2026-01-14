@@ -4,7 +4,7 @@ import { FiGithub } from "react-icons/fi";
 import { IoLogoInstagram } from "react-icons/io";
 
 import { Nav } from "../element/nav/Nav";
-import styles from "./Header.module.scss";
+import styles from "./header.module.scss";
 
 export const Header = () => {
   return (

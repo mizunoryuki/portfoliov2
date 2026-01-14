@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from "react";
 
-import { Header } from "@/components/global/Header";
+import { Header } from "@/components/global/header";
 
 import styles from "./index.module.scss";
 
