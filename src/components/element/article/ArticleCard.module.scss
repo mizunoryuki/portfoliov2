@@ -11,6 +11,10 @@
   border: none;
   padding: 0;
   width: 100%;
+
+  &:active {
+    scale: 0.98;
+  }
 }
 
 .imageWrapper {

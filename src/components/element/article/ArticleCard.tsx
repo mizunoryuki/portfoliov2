@@ -47,16 +47,15 @@ export const ArticleCard = ({ article }: { article: Article }) => {
 
   if (isComingSoon) {
     return (
-      <button
-        type="button"
+      <div
         className={`${styles.card} ${styles.disabled}`}
+        role="link"
         aria-disabled="true"
         aria-label="Coming soonの記事カード"
         tabIndex={-1}
-        disabled
       >
         {cardContent}
-      </button>
+      </div>
     );
   }
 
