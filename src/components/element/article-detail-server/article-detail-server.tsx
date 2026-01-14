@@ -40,7 +40,7 @@ const SANITIZE_OPTIONS: IOptions = {
   },
 };
 
-export default function ArticleDetailServer({ article }: { article: Article }) {
+export function ArticleDetailServer({ article }: { article: Article }) {
   // sanitize処理
   const sanitizedHTML = sanitizeHtml(article.contents || "", SANITIZE_OPTIONS);
 

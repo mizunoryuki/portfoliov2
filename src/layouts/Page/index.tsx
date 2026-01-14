@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function PageLayout(props: Props): ReactElement {
+export function PageLayout(props: Props): ReactElement {
   const { children } = props;
 
   return (

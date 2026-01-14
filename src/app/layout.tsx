@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Comfortaa, Inter, Noto_Sans_JP } from "next/font/google";
 
-import PageLayout from "@/layouts/Page";
+import { PageLayout } from "@/layouts/Page";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJp = Noto_Sans_JP({

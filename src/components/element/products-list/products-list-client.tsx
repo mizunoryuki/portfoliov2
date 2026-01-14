@@ -40,9 +40,9 @@ export const ProductListClient = ({
       modules={[Autoplay, Pagination]}
       className={`mySwiper ${styles.list}`}
     >
-      {products.map((element, index) => (
+      {products.map((element) => (
         <SwiperSlide
-          key={index}
+          key={element.id}
           style={{
             display: "flex",
             justifyContent: "center",

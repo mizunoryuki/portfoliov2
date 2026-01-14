@@ -7,10 +7,14 @@ export const Historylist = () => {
   return (
     <>
       <div className={styles.container}>
-        {Historystack.map((value, index) => {
+        {Historystack.map((value) => {
+          const year = value.date.year;
+          const month = value.date.month ?? 0;
+          const day = value.date.day ?? 0;
+          const key = `${year}-${month}-${day}-${value.title}`;
           return (
             <History
-              key={index}
+              key={key}
               date={value.date}
               title={value.title}
               content={value.content}

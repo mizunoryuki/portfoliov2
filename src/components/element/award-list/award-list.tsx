@@ -6,8 +6,9 @@ import styles from "./award-list.module.scss";
 export const Awardlist = () => {
   return (
     <div className={styles.awards}>
-      {Awardstack.map((element, index) => {
-        return <Award key={index} award={element} />;
+      {Awardstack.map((element) => {
+        const key = `${element.tournament}-${element.name}-${element.date}`;
+        return <Award key={key} award={element} />;
       })}
     </div>
   );

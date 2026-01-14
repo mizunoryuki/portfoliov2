@@ -65,5 +65,3 @@ export const ArticleCard = ({ article }: { article: Article }) => {
     </Link>
   );
 };
-
-export default ArticleCard;

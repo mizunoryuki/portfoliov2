@@ -105,6 +105,12 @@ export default tseslint.config([
       "import/no-default-export": "off",
     },
   },
+  {
+    files: ["src/app/**/opengraph-image.tsx"],
+    rules: {
+      "import/no-default-export": "off",
+    },
+  },
   eslintConfigPrettier,
   {
     ignores: [
@@ -114,6 +120,7 @@ export default tseslint.config([
       "next-env.d.ts",
       ".vercel/**",
       "public/**",
+      "next.config.ts",
     ],
   },
 ]);
