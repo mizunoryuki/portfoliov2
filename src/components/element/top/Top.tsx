@@ -1,6 +1,6 @@
 import { BsGear } from "react-icons/bs";
 
-import styles from "./Top.module.scss";
+import styles from "./top.module.scss";
 
 export const Top = () => {
   return (

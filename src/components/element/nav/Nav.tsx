@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { RiCloseFill } from "react-icons/ri";
 
-import styles from "./Nav.module.scss";
+import styles from "./nav.module.scss";
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import type { Historyinfo } from "@/types/history";
 
-import styles from "./History.module.scss";
+import styles from "./history.module.scss";
 
 export const History = ({ date, title, content }: Historyinfo) => {
   return (

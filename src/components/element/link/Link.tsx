@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import type { ContactProps } from "@/types/contact";
 
-import styles from "./Link.module.scss";
+import styles from "./link.module.scss";
 
 export const ContactLink = ({ contact }: ContactProps) => {
   if (contact.name !== "E-mail") {

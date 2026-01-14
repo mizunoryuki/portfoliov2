@@ -1,7 +1,7 @@
 import { Contactstack } from "@/const/contact-stack/contact-stack";
 
-import { ContactLink } from "../link/Link";
-import styles from "./Linklist.module.scss";
+import { ContactLink } from "../link/link";
+import styles from "./link-list.module.scss";
 
 export const Linklist = () => {
   return (

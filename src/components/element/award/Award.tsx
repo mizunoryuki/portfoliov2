@@ -1,6 +1,6 @@
 import type { AwardInfo } from "@/types/awards";
 
-import styles from "./Award.module.scss";
+import styles from "./award.module.scss";
 
 export const Award = ({ award }: AwardInfo) => {
   const { prize, tournament, date, name } = award;

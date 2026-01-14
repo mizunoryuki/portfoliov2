@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import styles from "./Skilllist.module.scss";
+import styles from "./skill-list.module.scss";
 
 type Props = {
   heading: string; //スキルの分類を書くテキスト

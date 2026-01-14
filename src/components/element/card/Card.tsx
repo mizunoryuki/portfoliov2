@@ -3,7 +3,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 import type { Content } from "@/types/top";
 
-import styles from "./Card.module.scss";
+import styles from "./card.module.scss";
 
 export const Card = ({ text, url, color = "var(--background-2)" }: Content) => {
   return (

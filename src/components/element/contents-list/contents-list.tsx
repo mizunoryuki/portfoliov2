@@ -4,7 +4,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import type { ContentsList } from "@/types/top";
 
-import styles from "./Contentslist.module.scss";
+import styles from "./contents-list.module.scss";
 
 export const Contentslist: React.FC<ContentsList> = ({
   text,

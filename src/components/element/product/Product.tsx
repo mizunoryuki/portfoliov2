@@ -4,7 +4,7 @@ import { RiExternalLinkFill } from "react-icons/ri";
 
 import type { ProductInfo } from "@/types/products";
 
-import styles from "./Product.module.scss";
+import styles from "./product.module.scss";
 
 const defaultImgUrl = "/preparing.png";
 

@@ -1,7 +1,7 @@
 import { Awardstack } from "@/const/award-stack/award-stack";
 
-import { Award } from "../award/Award";
-import styles from "./Awardlist.module.scss";
+import { Award } from "../award/award";
+import styles from "./award-list.module.scss";
 
 export const Awardlist = () => {
   return (

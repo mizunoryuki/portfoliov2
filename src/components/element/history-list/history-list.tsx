@@ -1,7 +1,7 @@
 import { Historystack } from "@/const/history-stack/history-stack";
 
-import { History } from "../history/History";
-import styles from "./History.module.scss";
+import { History } from "../history/history";
+import styles from "./history-list.module.scss";
 
 export const Historylist = () => {
   return (

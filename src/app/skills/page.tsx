@@ -1,5 +1,5 @@
-import { Skilllist } from "@/components/element/skilllist/Skilllist";
-import { Title } from "@/components/element/title/Title";
+import { Skilllist } from "@/components/element/skill-list/skill-list";
+import { Title } from "@/components/element/title/title";
 import { skillData } from "@/const/skill-stack/skill-stack";
 
 import styles from "./page.module.scss";

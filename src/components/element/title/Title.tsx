@@ -1,6 +1,6 @@
 import type { TitleProps } from "@/types/global";
 
-import styles from "./Title.module.scss";
+import styles from "./title.module.scss";
 
 export const Title = ({ text, color = "gray" }: TitleProps) => {
   return (

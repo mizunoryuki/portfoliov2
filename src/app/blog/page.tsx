@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import ArticleCard from "@/components/element/article/article-card";
-import { Title } from "@/components/element/title/Title";
+import { Title } from "@/components/element/title/title";
 import { fetchArticles } from "@/libs/articles";
 
 import styles from "./page.module.scss";

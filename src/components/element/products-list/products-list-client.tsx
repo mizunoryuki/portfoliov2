@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { type ProductInfo } from "@/types/products";
 
-import { ProductCard } from "../product/Product";
-import styles from "./ProductList.module.scss";
+import { ProductCard } from "../product/product";
+import styles from "./products-list.module.scss";
 
 export const ProductListClient = ({
   products,

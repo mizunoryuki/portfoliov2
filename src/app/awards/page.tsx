@@ -1,5 +1,5 @@
-import { Awardlist } from "@/components/element/awardlist/Awardlist";
-import { Title } from "@/components/element/title/Title";
+import { Awardlist } from "@/components/element/award-list/award-list";
+import { Title } from "@/components/element/title/title";
 
 export default function Page() {
   return (
