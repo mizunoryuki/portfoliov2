@@ -10,7 +10,7 @@ import { type ProductInfo } from "@/types/products";
 import { ProductCard } from "../product/product";
 import styles from "./products-list.module.scss";
 
-export const ProductListClient = ({
+export const ProductsListClient = ({
   products,
 }: {
   products: ProductInfo[];
