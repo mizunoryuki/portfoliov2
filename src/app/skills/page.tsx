@@ -1,6 +1,6 @@
 import { Skilllist } from "@/components/element/skilllist/Skilllist";
 import { Title } from "@/components/element/title/Title";
-import { skillData } from "@/const/skillstack/skillstack";
+import { skillData } from "@/const/skill-stack/skill-stack";
 
 import styles from "./page.module.scss";
 

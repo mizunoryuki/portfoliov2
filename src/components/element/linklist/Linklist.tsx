@@ -1,4 +1,4 @@
-import { Contactstack } from "@/const/contactstack/Contactstack";
+import { Contactstack } from "@/const/contact-stack/contact-stack";
 
 import { ContactLink } from "../link/Link";
 import styles from "./Linklist.module.scss";

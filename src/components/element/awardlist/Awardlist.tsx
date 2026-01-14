@@ -1,4 +1,4 @@
-import { Awardstack } from "@/const/awardstack/Awardstack";
+import { Awardstack } from "@/const/award-stack/award-stack";
 
 import { Award } from "../award/Award";
 import styles from "./Awardlist.module.scss";
