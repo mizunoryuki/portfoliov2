@@ -1,8 +1,8 @@
 import { fetchProducts } from "@/libs/products";
 
-import { ProductListClient } from "./products-list-client";
+import { ProductsListClient } from "./products-list-client";
 
-export const ProductList = async () => {
+export const ProductsList = async () => {
   const { contents } = await fetchProducts({});
-  return <ProductListClient products={contents} />;
+  return <ProductsListClient products={contents} />;
 };
