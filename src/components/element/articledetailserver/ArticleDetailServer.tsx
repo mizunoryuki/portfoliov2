@@ -1,12 +1,49 @@
 import Image from "next/image";
 import { IoMdTime } from "react-icons/io";
+import sanitizeHtml, { type IOptions } from "sanitize-html";
 
 import type { Article } from "@/types/article";
 
 import { ArticleBackButton } from "../articlebackbutton/ArticleBackButton";
 import styles from "./ArticleDetailServer.module.scss";
 
+const SANITIZE_OPTIONS: IOptions = {
+  allowedTags: [
+    ...sanitizeHtml.defaults.allowedTags,
+    "img",
+    "figure",
+    "figcaption",
+    "pre",
+    "code",
+    "iframe",
+  ],
+  allowedAttributes: {
+    ...sanitizeHtml.defaults.allowedAttributes,
+    "*": ["style"],
+    a: ["href", "name", "target", "rel"],
+    img: ["src", "alt", "width", "height", "loading", "decoding"],
+    iframe: [
+      "src",
+      "width",
+      "height",
+      "style",
+      "allowfullscreen",
+      "allow",
+      "frameborder",
+    ],
+  },
+
+  allowedIframeHostnames: ["www.canva.com"],
+  allowedSchemes: ["http", "https", "mailto"],
+  allowedSchemesByTag: {
+    img: ["http", "https", "data"],
+  },
+};
+
 export default function ArticleDetailServer({ article }: { article: Article }) {
+  // sanitize処理
+  const sanitizedHTML = sanitizeHtml(article.contents || "", SANITIZE_OPTIONS);
+
   return (
     <div>
       <ArticleBackButton />
@@ -34,7 +71,7 @@ export default function ArticleDetailServer({ article }: { article: Article }) {
         </div>
         <div
           dangerouslySetInnerHTML={{
-            __html: article.contents || "内容の取得に失敗しました",
+            __html: sanitizedHTML || "内容の取得に失敗しました",
           }}
           className={styles.content}
         />
