@@ -1,4 +1,4 @@
-import { Aboutme } from "@/components/element/aboutme/Aboutme";
+import { Aboutme } from "@/components/element/aboutme/aboutme";
 import { Historylist } from "@/components/element/historylist/Historylist";
 import { Title } from "@/components/element/title/Title";
 

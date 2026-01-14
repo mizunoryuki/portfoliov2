@@ -1,4 +1,4 @@
-import ArticleCard from "@/components/element/article/ArticleCard";
+import ArticleCard from "@/components/element/article/article-card";
 import { fetchArticles } from "@/libs/articles";
 
 import { Contentslist } from "../contentslist/Contentslist";

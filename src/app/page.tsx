@@ -1,4 +1,4 @@
-import { ArticleList } from "@/components/element/articlelist/ArticleList";
+import { ArticleList } from "@/components/element/article-list/article-list";
 import { Card } from "@/components/element/card/Card";
 import { Contentslist } from "@/components/element/contentslist/Contentslist";
 import { Top } from "@/components/element/top/Top";

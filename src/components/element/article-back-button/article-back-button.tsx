@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5";
 
-import styles from "./ArticleBackButton.module.scss";
+import styles from "./article-back-button.module.scss";
 
 export function ArticleBackButton() {
   const router = useRouter();

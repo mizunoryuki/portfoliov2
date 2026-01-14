@@ -4,8 +4,8 @@ import sanitizeHtml, { type IOptions } from "sanitize-html";
 
 import type { Article } from "@/types/article";
 
-import { ArticleBackButton } from "../articlebackbutton/ArticleBackButton";
-import styles from "./ArticleDetailServer.module.scss";
+import { ArticleBackButton } from "../article-back-button/article-back-button";
+import styles from "./article-detail-server.module.scss";
 
 const SANITIZE_OPTIONS: IOptions = {
   allowedTags: [

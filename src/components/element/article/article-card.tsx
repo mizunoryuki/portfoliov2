@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { Article } from "@/types/article";
 
-import styles from "./ArticleCard.module.scss";
+import styles from "./article-card.module.scss";
 
 export const ArticleCard = ({ article }: { article: Article }) => {
   const excerpt = (article.contents || "")

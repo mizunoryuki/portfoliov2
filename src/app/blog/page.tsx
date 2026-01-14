@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ArticleCard from "@/components/element/article/ArticleCard";
+import ArticleCard from "@/components/element/article/article-card";
 import { Title } from "@/components/element/title/Title";
 import { fetchArticles } from "@/libs/articles";
 

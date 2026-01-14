@@ -1,4 +1,4 @@
-import styles from "./Aboutme.module.scss";
+import styles from "./aboutme.module.scss";
 
 export const Aboutme = () => {
   return (
