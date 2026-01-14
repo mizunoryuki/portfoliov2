@@ -9,9 +9,10 @@ export const ArticleCard = ({ article }: { article: Article }) => {
   const excerpt = (article.contents || "")
     .replace(/<[^>]*>/g, "")
     .slice(0, 140);
+  const isComingSoon = article.id.startsWith("coming-soon-");
 
-  return (
-    <Link href={`/blog/${article.id}`} className={styles.card}>
+  const cardContent = (
+    <>
       <div className={styles.imageWrapper}>
         {article.eyecatch?.url ? (
           <Image
@@ -34,15 +35,34 @@ export const ArticleCard = ({ article }: { article: Article }) => {
       <div className={styles.body}>
         <h3 className={styles.title}>{article.title}</h3>
         <p className={styles.date}>
-          {article.id.startsWith("coming-soon-")
-            ? ""
-            : article.publishedAt.toLocaleDateString("ja-JP")}
+          {isComingSoon ? "" : article.publishedAt.toLocaleDateString("ja-JP")}
         </p>
         <p className={styles.excerpt}>
           {excerpt}
           {excerpt.length >= 140 ? "…" : ""}
         </p>
       </div>
+    </>
+  );
+
+  if (isComingSoon) {
+    return (
+      <button
+        type="button"
+        className={`${styles.card} ${styles.disabled}`}
+        aria-disabled="true"
+        aria-label="Coming soonの記事カード"
+        tabIndex={-1}
+        disabled
+      >
+        {cardContent}
+      </button>
+    );
+  }
+
+  return (
+    <Link href={`/blog/${article.id}`} className={styles.card}>
+      {cardContent}
     </Link>
   );
 };
