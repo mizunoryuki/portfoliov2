@@ -3,6 +3,7 @@ import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import unicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
 import { dirname } from "path";
 import tseslint from "typescript-eslint";
@@ -29,6 +30,7 @@ export default tseslint.config([
       "simple-import-sort": simpleImportSort,
       "jsx-a11y": jsxA11y,
       "unused-imports": unusedImports,
+      unicorn,
     },
     rules: {
       "no-console": "warn",
@@ -64,6 +66,14 @@ export default tseslint.config([
           argsIgnorePattern: "^_",
         },
       ],
+      "unicorn/filename-case": [
+        "warn",
+        {
+          cases: {
+            kebabCase: true,
+          },
+        },
+      ],
       complexity: ["warn", 10],
       "max-depth": ["warn", 3],
       "max-lines": [
@@ -89,8 +99,16 @@ export default tseslint.config([
     files: [
       "src/app/**/{page,layout,template,not-found,error,loading,route,default}.tsx",
       "next.config.mjs",
+      "next.config.ts",
+      "next.config.ts",
       "eslint.config.mjs",
     ],
+    rules: {
+      "import/no-default-export": "off",
+    },
+  },
+  {
+    files: ["src/app/**/opengraph-image.tsx"],
     rules: {
       "import/no-default-export": "off",
     },
@@ -104,6 +122,7 @@ export default tseslint.config([
       "next-env.d.ts",
       ".vercel/**",
       "public/**",
+      "next.config.ts",
     ],
   },
 ]);

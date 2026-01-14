@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import ArticleDetailServer from "@/components/element/articledetailserver/ArticleDetailServer";
+import { ArticleDetailServer } from "@/components/element/article-detail-server/article-detail-server";
 import { fetchAllArticleIds, fetchArticleById } from "@/libs/articles";
 import type { Article } from "@/types/article";
 

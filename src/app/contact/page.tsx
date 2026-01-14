@@ -1,5 +1,5 @@
-import { Linklist } from "@/components/element/linklist/Linklist";
-import { Title } from "@/components/element/title/Title";
+import { Linklist } from "@/components/element/link-list/link-list";
+import { Title } from "@/components/element/title/title";
 
 import styles from "./page.module.scss";
 

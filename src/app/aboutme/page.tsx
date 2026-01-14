@@ -1,6 +1,6 @@
-import { Aboutme } from "@/components/element/aboutme/Aboutme";
-import { Historylist } from "@/components/element/historylist/Historylist";
-import { Title } from "@/components/element/title/Title";
+import { Aboutme } from "@/components/element/aboutme/aboutme";
+import { Historylist } from "@/components/element/history-list/history-list";
+import { Title } from "@/components/element/title/title";
 
 export default function Page() {
   return (

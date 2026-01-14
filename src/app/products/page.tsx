@@ -1,5 +1,5 @@
-import { ProductList } from "@/components/element/productList/ProductList";
-import { Title } from "@/components/element/title/Title";
+import { ProductList } from "@/components/element/products-list/products-list";
+import { Title } from "@/components/element/title/title";
 
 export default function Page() {
   return (

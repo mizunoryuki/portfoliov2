@@ -1,0 +1,20 @@
+import type { ReactElement, ReactNode } from "react";
+
+import { Header } from "@/components/global/header";
+
+import styles from "./index.module.scss";
+
+type Props = {
+  children: ReactNode;
+};
+
+export function PageLayout(props: Props): ReactElement {
+  const { children } = props;
+
+  return (
+    <>
+      <Header />
+      <main className={styles.main}>{children}</main>
+    </>
+  );
+}

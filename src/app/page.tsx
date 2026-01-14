@@ -1,7 +1,7 @@
-import { ArticleList } from "@/components/element/articlelist/ArticleList";
-import { Card } from "@/components/element/card/Card";
-import { Contentslist } from "@/components/element/contentslist/Contentslist";
-import { Top } from "@/components/element/top/Top";
+import { ArticleList } from "@/components/element/article-list/article-list";
+import { Card } from "@/components/element/card/card";
+import { Contentslist } from "@/components/element/contents-list/contents-list";
+import { Top } from "@/components/element/top/top";
 
 import styles from "./page.module.css";
 
