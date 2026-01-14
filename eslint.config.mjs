@@ -99,6 +99,8 @@ export default tseslint.config([
     files: [
       "src/app/**/{page,layout,template,not-found,error,loading,route,default}.tsx",
       "next.config.mjs",
+      "next.config.ts",
+      "next.config.ts",
       "eslint.config.mjs",
     ],
     rules: {
