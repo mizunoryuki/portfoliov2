@@ -13,7 +13,13 @@ export default function NotFound() {
         position: "relative",
       }}
     >
-      <Image src={"/not.png"} fill sizes="20" alt="notFound" priority />
+      <Image
+        src={"/not.png"}
+        fill
+        sizes="(max-width: 768px) 90vw, 500px"
+        alt="notFound"
+        priority
+      />
     </div>
   );
 }

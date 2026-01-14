@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: Props) {
           src={info.eyecatch?.url || "/preparing.png"}
           alt="product image"
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 92vw, 50vw"
           priority
         />
       </div>

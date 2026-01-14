@@ -19,6 +19,7 @@ export const ProductCard = (productDetail: { product: ProductInfo }) => {
           alt="product image"
           quality={1}
           fill
+          sizes="(max-width: 768px) 80vw, 300px"
           priority
         />
       </div>
