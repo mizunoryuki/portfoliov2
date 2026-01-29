@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { ArticleCard } from "@/components/element/article/article-card";
 import { Title } from "@/components/element/title/title";
-import { fetchArticles } from "@/libs/articles";
+import { fetchAllArticles } from "@/libs/articles";
 
 import styles from "./page.module.scss";
 
@@ -19,7 +19,7 @@ export default async function Page({ searchParams }: Props) {
   const page = Math.max(1, parseInt((param?.page as string) || "1", 10) || 1);
   const offset = (page - 1) * PAGE_SIZE;
 
-  const { contents: articles, totalCount } = await fetchArticles({
+  const { contents: articles, totalCount } = await fetchAllArticles({
     limit: PAGE_SIZE,
     offset,
     fields: "id,title,eyecatch,publishedAt,tag,contents",

@@ -17,9 +17,10 @@ export const ArticleList = async () => {
   const emptySlots = MAX_DISPLAY - displayArticles.length;
   const placeholderArticles = Array.from({ length: emptySlots }, (_, idx) => ({
     id: `coming-soon-${displayArticles.length + idx}`,
-    eyecatch: { url: "/not.png", height: "", width: "" },
+    eyecatch: { url: "/not.webp", height: "", width: "" },
     title: "Coming soon...",
     tag: undefined,
+    source: "microcms" as const,
     contents: "",
     publishedAt: new Date(),
   }));

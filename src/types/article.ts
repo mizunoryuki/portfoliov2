@@ -23,6 +23,8 @@ export const ArticleSchema = z.object({
   tag: z.array(z.string()).optional(),
   contents: z.string().optional(),
   publishedAt: z.coerce.date(), // 文字列をDateオブジェクトに変換
+  source: z.enum(["microcms", "qiita"]).optional().default("microcms"), // データソースを追加
+  url: z.string().optional(), // Qiita記事の外部URLを追加
 });
 
 export const ArticleListResponseSchema = z.object({

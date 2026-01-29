@@ -7,6 +7,7 @@ import {
   ArticleSchema,
 } from "@/types/article";
 
+import { fetchQiitaArticles } from "./qiita";
 import type { FetchOptions, ListParams } from "./types";
 
 const serviceDomain = process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "";
@@ -85,4 +86,31 @@ export const fetchAllArticleIds = async (): Promise<string[]> => {
   }
 
   return ids;
+};
+
+// microCMSとQiitaの記事を統合して取得
+export const fetchAllArticles = async (
+  params: ListParams = {},
+  options?: FetchOptions,
+): Promise<ArticleListResponse> => {
+  // microCMSとQiitaの記事を並行取得
+  const [microCmsData, qiitaArticles] = await Promise.all([
+    fetchArticles(params, options),
+    fetchQiitaArticles(),
+  ]);
+
+  // 記事を統合して日付順にソート
+  const allArticles = [...microCmsData.contents, ...qiitaArticles].sort(
+    (a, b) => b.publishedAt.getTime() - a.publishedAt.getTime(),
+  );
+
+  // ページネーション処理
+  const limit = params.limit || allArticles.length;
+  const offset = params.offset || 0;
+  const paginatedArticles = allArticles.slice(offset, offset + limit);
+
+  return {
+    contents: paginatedArticles,
+    totalCount: allArticles.length,
+  };
 };

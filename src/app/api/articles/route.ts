@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { fetchArticles } from "@/libs/articles";
+import { fetchAllArticles } from "@/libs/articles";
 
 export const runtime = "edge";
 export const revalidate = 300;
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     searchParams.get("fields") || "id,title,eyecatch,publishedAt,tag,contents";
 
   try {
-    const data = await fetchArticles(
+    const data = await fetchAllArticles(
       {
         limit: limit ? Number(limit) : undefined,
         offset: offset ? Number(offset) : undefined,

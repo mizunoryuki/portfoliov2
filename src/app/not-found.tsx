@@ -14,7 +14,7 @@ export default function NotFound() {
       }}
     >
       <Image
-        src={"/not.png"}
+        src={"/not.webp"}
         fill
         sizes="(max-width: 768px) 90vw, 500px"
         alt="notFound"
