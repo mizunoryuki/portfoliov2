@@ -6,7 +6,7 @@ import type { ProductInfo } from "@/types/products";
 
 import styles from "./product.module.scss";
 
-const defaultImgUrl = "/preparing.png";
+const defaultImgUrl = "/preparing.webp";
 
 export const ProductCard = (productDetail: { product: ProductInfo }) => {
   const { id, eyecatch, title, description, tag } = productDetail.product; // デフォルト値を設定

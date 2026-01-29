@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
     <main className={styles.container}>
       <div className={styles.image}>
         <Image
-          src={info.eyecatch?.url || "/preparing.png"}
+          src={info.eyecatch?.url || "/preparing.webp"}
           alt="product image"
           fill
           sizes="(max-width: 768px) 92vw, 50vw"

@@ -33,7 +33,7 @@ export const ArticleCard = ({ article }: { article: Article }) => {
           />
         ) : (
           <Image
-            src="/not.png"
+            src="/not.webp"
             alt="no image"
             fill
             sizes="(max-width: 600px) 100vw, 300px"
