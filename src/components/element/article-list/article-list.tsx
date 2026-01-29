@@ -20,6 +20,7 @@ export const ArticleList = async () => {
     eyecatch: { url: "/not.png", height: "", width: "" },
     title: "Coming soon...",
     tag: undefined,
+    source: "microcms" as const,
     contents: "",
     publishedAt: new Date(),
   }));
