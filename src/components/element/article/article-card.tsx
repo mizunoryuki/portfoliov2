@@ -10,10 +10,19 @@ export const ArticleCard = ({ article }: { article: Article }) => {
     .replace(/<[^>]*>/g, "")
     .slice(0, 140);
   const isComingSoon = article.id.startsWith("coming-soon-");
+  const isQiita = article.source === "qiita";
+  const href = isQiita ? article.url || "#" : `/blog/${article.id}`;
+  const linkTarget = isQiita ? "_blank" : undefined;
+  const linkRel = isQiita ? "noopener noreferrer" : undefined;
 
   const cardContent = (
     <>
       <div className={styles.imageWrapper}>
+        {isQiita && (
+          <div className={styles.externalIcon} aria-label="外部サイトへ遷移">
+            ↗
+          </div>
+        )}
         {article.eyecatch?.url ? (
           <Image
             src={article.eyecatch.url}
@@ -60,7 +69,7 @@ export const ArticleCard = ({ article }: { article: Article }) => {
   }
 
   return (
-    <Link href={`/blog/${article.id}`} className={styles.card}>
+    <Link href={href} className={styles.card} target={linkTarget} rel={linkRel}>
       {cardContent}
     </Link>
   );
